@@ -1,0 +1,65 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/simulation/modelsim
+vregressiveCounter
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1692520045
+!i10b 1
+!s100 mOLiN3^H45DgWgLA8jTzW2
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+In9l_PG2X[]lL?`LRDBdU=2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1692519967
+8C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/regressiveCounter.sv
+FC:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/regressiveCounter.sv
+!i122 0
+L0 1 19
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1692520044.000000
+!s107 C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/regressiveCounter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3|C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/regressiveCounter.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3
+Z8 tCvgOpt 0
+nregressive@counter
+vregressiveCounter_tb
+R1
+R2
+!i10b 1
+!s100 XAGeBiX<lSjk07;2W]8h>0
+R3
+I_]<l<lVk6d1T:kEk;Bk3n1
+R4
+S1
+R0
+w1692519833
+8C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/regressiveCounter_tb.sv
+FC:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/regressiveCounter_tb.sv
+!i122 1
+L0 1 40
+R5
+r1
+!s85 0
+31
+!s108 1692520045.000000
+!s107 C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/regressiveCounter_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3|C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/regressiveCounter_tb.sv|
+!i113 1
+R6
+R7
+R8
+nregressive@counter_tb
