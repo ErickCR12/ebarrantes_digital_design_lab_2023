@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/simulation/modelsim
 Efulladder4bit_tb
-Z1 w1692587229
+Z1 w1692653332
 Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
@@ -25,9 +25,9 @@ V3JA3Th4eRJJ`jGOCJXL`e2
 !s100 mR>3ic=IzUQ_1nY7ePMZl3
 Z8 OV;C;2020.1;71
 31
-Z9 !s110 1692587287
+Z9 !s110 1692653412
 !i10b 1
-Z10 !s108 1692587287.000000
+Z10 !s108 1692653412.000000
 Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder4Bit_tb.vhd|
 !s107 C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder4Bit_tb.vhd|
 !i113 1
@@ -42,8 +42,8 @@ DEx4 work 16 fulladder4bit_tb 0 22 3JA3Th4eRJJ`jGOCJXL`e2
 !i122 1
 l22
 L9 51
-V<ge:Fi=mUK>GhTj<CIS@f2
-!s100 7l;=8hg9HGc4MP`dk5_Rg0
+V0<V42fdP3EL2G_N^oia473
+!s100 jMY@n=_JWOLTN?[[@Oj`P3
 R8
 31
 R9
@@ -55,7 +55,7 @@ Z14 !s107 C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digi
 R12
 R13
 Efulladder_1bit
-Z15 w1692585406
+Z15 w1692589951
 R4
 R5
 !i122 0
@@ -68,18 +68,18 @@ V7l0Pk8Ae=4<_]W:>ZIBz70
 !s100 mV^1?c=;UUD[;VWPc6>ze3
 R8
 31
-Z18 !s110 1692587286
+R9
 !i10b 1
-Z19 !s108 1692587286.000000
-Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder_1bit.vhd|
-Z21 !s107 C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder_1bit.vhd|
+R10
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder_1bit.vhd|
+Z19 !s107 C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder_1bit.vhd|
 !i113 1
 R12
 R13
 Afull_adder1bit
 R4
 R5
-Z22 DEx4 work 14 fulladder_1bit 0 22 7l0Pk8Ae=4<_]W:>ZIBz70
+Z20 DEx4 work 14 fulladder_1bit 0 22 7l0Pk8Ae=4<_]W:>ZIBz70
 !i122 0
 l10
 L9 5
@@ -87,11 +87,11 @@ VALmnliHUXLCz7Nk4PEI[G1
 !s100 mO_XAcdINnFhhjQM:?aBz3
 R8
 31
-R18
+R9
 !i10b 1
+R10
+R18
 R19
-R20
-R21
 !i113 1
 R12
 R13
@@ -109,16 +109,16 @@ V^[hJkQjFZobYl=_aSNZ<S3
 !s100 PYDSo4JUWLcZF<;M=F]n]0
 R8
 31
-R18
+R9
 !i10b 1
+R10
+R18
 R19
-R20
-R21
 !i113 1
 R12
 R13
 Afulladder_4bit
-R22
+R20
 R4
 R5
 DEx4 work 14 fulladder_4bit 0 22 ^[hJkQjFZobYl=_aSNZ<S3
@@ -129,11 +129,11 @@ VKbC234SmM9VTN^o3NTDbZ1
 !s100 ]^>:nA_0QAVAZcSG5OKRM2
 R8
 31
-R18
+R9
 !i10b 1
+R10
+R18
 R19
-R20
-R21
 !i113 1
 R12
 R13

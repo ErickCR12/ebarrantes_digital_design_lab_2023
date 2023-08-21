@@ -21,37 +21,37 @@ architecture fulladder4bit_tb of FullAdder4Bit_tb is
 
 begin
 	-- Instancia del sumador
-	dut: FullAdder_4bit port map (A, B, Cin, Sum, Cout);
+	UUT: FullAdder_4bit port map (A, B, Cin, Sum, Cout);
 	process begin
 		-- Establecer valores iniciales
 		A <= "0000";
 		B <= "0000";
 		Cin <= '0';
-		wait for 10 ns;
+		wait for 0.2 ns;
 
 		-- Prueba 1
 		A <= "0101";
 		B <= "0010";
 		Cin <= '0';
-		wait for 10 ns;
+		wait for 0.2 ns;
 
 		-- Prueba 2
 		A <= "1100";
 		B <= "1011";
 		Cin <= '1';
-		wait for 10 ns;
+		wait for 0.2 ns;
 
 		-- Prueba 3
 		A <= "1111";
 		B <= "0001";
 		Cin <= '0';
-		wait for 10 ns;
+		wait for 0.2 ns;
 
 		-- Prueba 4
 		A <= "1010";
 		B <= "0101";
 		Cin <= '1';
-		wait for 10 ns;
+		wait for 0.2 ns;
 
 		-- Detener la simulación
 		wait;
