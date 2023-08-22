@@ -5,7 +5,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1 {C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv}
+vlog -sv -work work +incdir+C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1 {C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/sevenseg.sv}
 
 vlog -sv -work work +incdir+C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1 {C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD_tb.sv}
 

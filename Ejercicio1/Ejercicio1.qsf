@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY decoBCD
+set_global_assignment -name TOP_LEVEL_ENTITY sevenseg
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:36:48  AUGUST 17, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
@@ -64,11 +64,21 @@ set_global_assignment -name EDA_TEST_BENCH_NAME decoBCD_tb -section_id eda_simul
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id decoBCD_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME decoBCD_tb -section_id decoBCD_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE decoBCD_tb.sv -section_id decoBCD_tb
+set_global_assignment -name SYSTEMVERILOG_FILE sevenseg.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_AB12 -to in[3]
-set_location_assignment PIN_AC12 -to in[2]
-set_location_assignment PIN_AF9 -to in[1]
-set_location_assignment PIN_AF10 -to in[0]
+set_location_assignment PIN_AB12 -to sw[0]
+set_location_assignment PIN_AC12 -to sw[1]
+set_location_assignment PIN_AF9 -to sw[2]
+set_location_assignment PIN_AF10 -to sw[3]
+set_location_assignment PIN_AH29 -to sev[0]
+set_location_assignment PIN_AE26 -to sev[8]
+set_location_assignment PIN_AE27 -to sev[7]
+set_location_assignment PIN_AE28 -to sev[6]
+set_location_assignment PIN_AG27 -to sev[5]
+set_location_assignment PIN_AF28 -to sev[4]
+set_location_assignment PIN_AG28 -to sev[3]
+set_location_assignment PIN_AH28 -to sev[2]
+set_location_assignment PIN_AJ29 -to sev[1]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

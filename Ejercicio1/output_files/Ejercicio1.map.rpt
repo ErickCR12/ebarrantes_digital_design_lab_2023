@@ -1,5 +1,5 @@
-Analysis & Elaboration report for Ejercicio1
-Mon Aug 21 23:04:36 2023
+Analysis & Synthesis report for Ejercicio1
+Tue Aug 22 10:22:20 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -7,10 +7,16 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -34,47 +40,36 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon Aug 21 23:04:36 2023       ;
-; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                 ; Ejercicio1                                  ;
-; Top-level Entity Name         ; decoBCD                                     ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Aug 22 10:22:20 2023       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; Ejercicio1                                  ;
+; Top-level Entity Name           ; sevenseg                                    ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 13                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; decoBCD            ; Ejercicio1         ;
+; Top-level entity name                                                           ; sevenseg           ; Ejercicio1         ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -155,35 +150,146 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
+; sevenseg.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/sevenseg.sv ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 4           ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 8           ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 0           ;
+;     -- 5 input functions                    ; 0           ;
+;     -- 4 input functions                    ; 7           ;
+;     -- <=3 input functions                  ; 1           ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 13          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; sw[1]~input ;
+; Maximum fan-out                             ; 8           ;
+; Total fan-out                               ; 53          ;
+; Average fan-out                             ; 1.56        ;
++---------------------------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |sevenseg                  ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 13   ; 0            ; |sevenseg           ; sevenseg    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 8                           ;
+;     normal            ; 8                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 7                           ;
+; boundary_port         ; 13                          ;
+;                       ;                             ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 1.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Aug 21 23:04:26 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Ejercicio1 -c Ejercicio1 --analysis_and_elaboration
+    Info: Processing started: Tue Aug 22 10:22:10 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Ejercicio1 -c Ejercicio1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 2 entities, in source file decobcd.sv
+Info (12021): Found 1 design units, including 1 entities, in source file decobcd.sv
     Info (12023): Found entity 1: decoBCD File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv Line: 1
-    Info (12023): Found entity 2: sevenseg File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file decobcd_tb.sv
     Info (12023): Found entity 1: decoBCD_tb File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD_tb.sv Line: 1
-Info (12127): Elaborating entity "decoBCD" for the top level hierarchy
-Warning (10240): Verilog HDL Always Construct warning at decoBCD.sv(2): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv Line: 2
-Info (10041): Inferred latch for "out[0]" at decoBCD.sv(5) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv Line: 5
-Info (10041): Inferred latch for "out[1]" at decoBCD.sv(5) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv Line: 5
-Info (10041): Inferred latch for "out[2]" at decoBCD.sv(5) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv Line: 5
-Info (10041): Inferred latch for "out[3]" at decoBCD.sv(5) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv Line: 5
-Info (10041): Inferred latch for "out[4]" at decoBCD.sv(5) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv Line: 5
-Info (10041): Inferred latch for "out[5]" at decoBCD.sv(5) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv Line: 5
-Info (10041): Inferred latch for "out[6]" at decoBCD.sv(5) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv Line: 5
-Info (10041): Inferred latch for "out[7]" at decoBCD.sv(5) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv Line: 5
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4767 megabytes
-    Info: Processing ended: Mon Aug 21 23:04:36 2023
+Info (12021): Found 1 design units, including 1 entities, in source file sevenseg.sv
+    Info (12023): Found entity 1: sevenseg File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/sevenseg.sv Line: 1
+Info (12127): Elaborating entity "sevenseg" for the top level hierarchy
+Warning (10240): Verilog HDL Always Construct warning at sevenseg.sv(3): inferring latch(es) for variable "sev", which holds its previous value in one or more paths through the always construct File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/sevenseg.sv Line: 3
+Info (10041): Inferred latch for "sev[0]" at sevenseg.sv(6) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/sevenseg.sv Line: 6
+Info (10041): Inferred latch for "sev[1]" at sevenseg.sv(6) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/sevenseg.sv Line: 6
+Info (10041): Inferred latch for "sev[2]" at sevenseg.sv(6) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/sevenseg.sv Line: 6
+Info (10041): Inferred latch for "sev[3]" at sevenseg.sv(6) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/sevenseg.sv Line: 6
+Info (10041): Inferred latch for "sev[4]" at sevenseg.sv(6) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/sevenseg.sv Line: 6
+Info (10041): Inferred latch for "sev[5]" at sevenseg.sv(6) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/sevenseg.sv Line: 6
+Info (10041): Inferred latch for "sev[6]" at sevenseg.sv(6) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/sevenseg.sv Line: 6
+Info (10041): Inferred latch for "sev[7]" at sevenseg.sv(6) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/sevenseg.sv Line: 6
+Info (10041): Inferred latch for "sev[8]" at sevenseg.sv(6) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/sevenseg.sv Line: 6
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 21 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 8 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4812 megabytes
+    Info: Processing ended: Tue Aug 22 10:22:20 2023
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Total CPU time (on all processors): 00:00:15
 
 

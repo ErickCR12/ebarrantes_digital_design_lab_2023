@@ -10,43 +10,64 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1 {C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv}
+# vlog -sv -work work +incdir+C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1 {C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/sevenseg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:05:59 on Aug 21,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1" C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv 
-# -- Compiling module decoBCD
+# Start time: 10:10:25 on Aug 22,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1" C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/sevenseg.sv 
 # -- Compiling module sevenseg
 # 
 # Top level modules:
-# 	decoBCD
 # 	sevenseg
-# End time: 23:05:59 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 10:10:25 on Aug 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1 {C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:05:59 on Aug 21,2023
+# Start time: 10:10:25 on Aug 22,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1" C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD_tb.sv 
 # -- Compiling module decoBCD_tb
 # 
 # Top level modules:
 # 	decoBCD_tb
-# End time: 23:05:59 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 10:10:25 on Aug 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  decoBCD_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" decoBCD_tb 
-# Start time: 23:05:59 on Aug 21,2023
+# Start time: 10:10:25 on Aug 22,2023
 # Loading sv_std.std
 # Loading work.decoBCD_tb
-# Loading work.decoBCD
+# ** Error: (vsim-3033) Instantiation of 'decoBCD' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /decoBCD_tb File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD_tb.sv Line: 8
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cyclonev
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cyclonev_hssi
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cyclonev_pcie_hip
+#             C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/simulation/modelsim/rtl_work
+#             C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/simulation/modelsim/rtl_work
 # Loading work.sevenseg
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# End time: 23:06:37 on Aug 21,2023, Elapsed time: 0:00:38
-# Errors: 0, Warnings: 0
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./Ejercicio1_run_msim_rtl_verilog.do PAUSED at line 12
+vsim work.decoBCD_tb
+# vsim work.decoBCD_tb 
+# Start time: 10:10:25 on Aug 22,2023
+# Loading sv_std.std
+# Loading work.decoBCD_tb
+# ** Error: (vsim-3033) Instantiation of 'decoBCD' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /decoBCD_tb File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD_tb.sv Line: 8
+#         Searched libraries:
+#             C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/simulation/modelsim/rtl_work
+# Loading work.sevenseg
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./Ejercicio1_run_msim_rtl_verilog.do PAUSED at line 12
+# End time: 10:16:12 on Aug 22,2023, Elapsed time: 0:05:47
+# Errors: 2, Warnings: 0
