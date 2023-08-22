@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Ejercicio1
-Mon Aug 21 19:11:48 2023
+Mon Aug 21 23:04:36 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon Aug 21 19:11:48 2023       ;
+; Analysis & Elaboration Status ; Successful - Mon Aug 21 23:04:36 2023       ;
 ; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                 ; Ejercicio1                                  ;
 ; Top-level Entity Name         ; decoBCD                                     ;
@@ -161,12 +161,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Aug 21 19:11:39 2023
+    Info: Processing started: Mon Aug 21 23:04:26 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Ejercicio1 -c Ejercicio1 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file decobcd.sv
+Info (12021): Found 2 design units, including 2 entities, in source file decobcd.sv
     Info (12023): Found entity 1: decoBCD File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv Line: 1
+    Info (12023): Found entity 2: sevenseg File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file decobcd_tb.sv
     Info (12023): Found entity 1: decoBCD_tb File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD_tb.sv Line: 1
 Info (12127): Elaborating entity "decoBCD" for the top level hierarchy
@@ -180,9 +181,9 @@ Info (10041): Inferred latch for "out[5]" at decoBCD.sv(5) File: C:/Users/aleji/
 Info (10041): Inferred latch for "out[6]" at decoBCD.sv(5) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv Line: 5
 Info (10041): Inferred latch for "out[7]" at decoBCD.sv(5) File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Ejercicio1/decoBCD.sv Line: 5
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4761 megabytes
-    Info: Processing ended: Mon Aug 21 19:11:48 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 4767 megabytes
+    Info: Processing ended: Mon Aug 21 23:04:36 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:16
 
 
