@@ -3,8 +3,8 @@ module regressiveCounter #(parameter N = 10)
 	 output reg [N-1:0] out = in);
 	
 	reg [N-1:0] count = 0;
-	always_ff @(posedge decrement or posedge reset) begin
-		if (reset)	begin
+	always_ff @(negedge decrement or negedge reset) begin
+		if (~reset)	begin
 			out <= in;
 			count <= 0;
 		end

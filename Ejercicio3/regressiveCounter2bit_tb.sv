@@ -7,24 +7,24 @@ module regressiveCounter2bit_tb();
 	
 	initial begin
 		in = 2'b11;
-		decrement = 0;
-		reset = 0;
-		#100
 		decrement = 1;
-		#100
-		decrement = 0;
-		#100
-		decrement = 1;
-		#100
-		decrement = 0;
-		#100
-		decrement = 1;
-		#100
-		decrement = 0;
-		#100
-		decrement = 1;
-		#100
 		reset = 1;
+		#100
+		decrement = 0;
+		#100
+		decrement = 1;
+		#100
+		decrement = 0;
+		#100
+		decrement = 1;
+		#100
+		decrement = 0;
+		#100
+		decrement = 1;
+		#100
+		decrement = 0;
+		#100
+		reset = 0;
 	end
 
 		

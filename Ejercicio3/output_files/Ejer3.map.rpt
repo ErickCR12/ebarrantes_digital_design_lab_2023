@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Ejer3
-Mon Aug 21 16:28:45 2023
+Mon Aug 21 19:01:26 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -9,9 +9,8 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |regressiveCounter
-  5. Analysis & Elaboration Settings
-  6. Analysis & Elaboration Messages
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
 
 
 
@@ -38,10 +37,10 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon Aug 21 16:28:45 2023          ;
+; Analysis & Elaboration Status ; Successful - Mon Aug 21 19:01:26 2023          ;
 ; Quartus Prime Version         ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                 ; Ejer3                                          ;
-; Top-level Entity Name         ; regressiveCounter                              ;
+; Top-level Entity Name         ; sevenSegmentsLogic                             ;
 ; Family                        ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
 ; Total registers               ; N/A until Partition Merge                      ;
@@ -69,23 +68,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |regressiveCounter ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; N              ; 10    ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; regressiveCounter  ; Ejer3              ;
+; Top-level entity name                                                           ; sevenSegmentsLogic ; Ejer3              ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -172,7 +161,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Mon Aug 21 16:28:37 2023
+    Info: Processing started: Mon Aug 21 19:01:18 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Ejer3 -c Ejer3 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -184,12 +173,29 @@ Info (12021): Found 1 design units, including 1 entities, in source file regress
     Info (12023): Found entity 1: regressiveCounter4bit_tb File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/regressiveCounter4bit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regressivecounter6bit_tb.sv
     Info (12023): Found entity 1: regressiveCounter6bit_tb File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/regressiveCounter6bit_tb.sv Line: 1
-Info (12127): Elaborating entity "regressiveCounter" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at regressiveCounter.sv(13): truncated value with size 32 to match size of target (10) File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/regressiveCounter.sv Line: 13
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4784 megabytes
-    Info: Processing ended: Mon Aug 21 16:28:45 2023
+Info (12021): Found 1 design units, including 1 entities, in source file sevensegmentslogic.sv
+    Info (12023): Found entity 1: sevenSegmentsLogic File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/sevenSegmentsLogic.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sevensegmentslogic_tb.sv
+    Info (12023): Found entity 1: sevenSegmentsLogic_tb File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/sevenSegmentsLogic_tb.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at sevenSegmentsLogic.sv(5): created implicit net for "a" File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/sevenSegmentsLogic.sv Line: 5
+Warning (10236): Verilog HDL Implicit Net warning at sevenSegmentsLogic.sv(6): created implicit net for "b" File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/sevenSegmentsLogic.sv Line: 6
+Warning (10236): Verilog HDL Implicit Net warning at sevenSegmentsLogic.sv(7): created implicit net for "c" File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/sevenSegmentsLogic.sv Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at sevenSegmentsLogic.sv(8): created implicit net for "d" File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/sevenSegmentsLogic.sv Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at sevenSegmentsLogic.sv(9): created implicit net for "e" File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/sevenSegmentsLogic.sv Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at sevenSegmentsLogic.sv(10): created implicit net for "f" File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/sevenSegmentsLogic.sv Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at sevenSegmentsLogic.sv(12): created implicit net for "aSegment2" File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/sevenSegmentsLogic.sv Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at sevenSegmentsLogic.sv(13): created implicit net for "bSegment2" File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/sevenSegmentsLogic.sv Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at sevenSegmentsLogic.sv(14): created implicit net for "cSegment2" File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/sevenSegmentsLogic.sv Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at sevenSegmentsLogic.sv(15): created implicit net for "dSegment2" File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/sevenSegmentsLogic.sv Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at sevenSegmentsLogic.sv(16): created implicit net for "eSegment2" File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/sevenSegmentsLogic.sv Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at sevenSegmentsLogic.sv(17): created implicit net for "fSegment2" File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/sevenSegmentsLogic.sv Line: 17
+Warning (10236): Verilog HDL Implicit Net warning at sevenSegmentsLogic.sv(18): created implicit net for "gSegment2" File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/sevenSegmentsLogic.sv Line: 18
+Info (12127): Elaborating entity "sevenSegmentsLogic" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at sevenSegmentsLogic.sv(10): object "f" assigned a value but never read File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Ejercicio3/sevenSegmentsLogic.sv Line: 10
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 4777 megabytes
+    Info: Processing ended: Mon Aug 21 19:01:26 2023
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Total CPU time (on all processors): 00:00:12
 
 
