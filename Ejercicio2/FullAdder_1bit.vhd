@@ -1,44 +1,98 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity FullAdder_1bit is
     Port ( A, B, Cin : in STD_LOGIC;
            Sum, Cout : out STD_LOGIC);
 end FullAdder_1bit;
 
-architecture full_adder1bit of FullAdder_1bit is
+architecture fulladder of FullAdder_1bit is
 begin
     Sum <= A XOR B XOR Cin;
     Cout <= (A AND B) OR (B AND Cin) OR (A AND Cin);
-end full_adder1bit;
+end fulladder;
 
-----------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-entity FullAdder_4bit is
+use IEEE.NUMERIC_STD.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity FourBitAdder is
     Port ( A, B : in STD_LOGIC_VECTOR(3 downto 0);
            Cin : in STD_LOGIC;
            Sum : out STD_LOGIC_VECTOR(3 downto 0);
            Cout : out STD_LOGIC);
-end FullAdder_4bit;
+end FourBitAdder;
 
-architecture fulladder_4bit of FullAdder_4bit is
-    signal C : STD_LOGIC_VECTOR(3 downto 0);
-    signal S : STD_LOGIC_VECTOR(3 downto 0);
+architecture fourbitadder of FourBitAdder is
+    signal carry1, carry2, carry3 : STD_LOGIC;
+    signal s1, s2, s3, s4 : STD_LOGIC;
+	 
+component FullAdder_1bit
+	Port (A, B, Cin : in STD_LOGIC;
+         Sum, Cout : out STD_LOGIC);
+
+end component;
 begin
-    C(0) <= Cin;
-
-    FA0: entity work.FullAdder_1bit
-        port map (A(0), B(0), C(0), S(0), C(1));
+    FA1: FullAdder_1bit port map (A(0), B(0), Cin, s1, carry1);
+    FA2: FullAdder_1bit port map (A(1), B(1), carry1, s2, carry2);
+    FA3: FullAdder_1bit port map (A(2), B(2), carry2, s3, carry3);
+    FA4: FullAdder_1bit port map (A(3), B(3), carry3, s4, Cout);
     
-    FA1: entity work.FullAdder_1bit
-        port map (A(1), B(1), C(1), S(1), C(2));
-        
-    FA2: entity work.FullAdder_1bit
-        port map (A(2), B(2), C(2), S(2), C(3));
-        
-    FA3: entity work.FullAdder_1bit
-        port map (A(3), B(3), C(3), S(3), Cout);
-        
-    Sum <= S;
-end fulladder_4bit;
+    Sum <= s4 & s3 & s2 & s1;
+end fourbitadder;
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity HexDisplay is
+    Port ( HexValue : in STD_LOGIC_VECTOR(3 downto 0);
+           Segments : out STD_LOGIC_VECTOR(6 downto 0));
+end HexDisplay;
+
+architecture hexdisplay of HexDisplay is
+begin
+    process(HexValue)
+    begin
+        case HexValue is
+            when "0000" =>
+                Segments <= "0000001"; -- 0
+            when "0001" =>
+                Segments <= "1001111"; -- 1
+            when "0010" =>
+                Segments <= "0010010"; -- 2
+            when "0011" =>
+                Segments <= "0000110"; -- 3
+            when "0100" =>
+                Segments <= "1001100"; -- 4
+            when "0101" =>
+                Segments <= "0100100"; -- 5
+            when "0110" =>
+                Segments <= "0100000"; -- 6
+            when "0111" =>
+                Segments <= "0001111"; -- 7
+            when "1000" =>
+                Segments <= "0000000"; -- 8
+            when "1001" =>
+                Segments <= "0000100"; -- 9
+            when "1010" =>
+                Segments <= "0001000"; -- A
+            when "1011" =>
+                Segments <= "1100000"; -- B
+            when "1100" =>
+                Segments <= "0110001"; -- C
+            when "1101" =>
+                Segments <= "1000010"; -- D
+            when "1110" =>
+                Segments <= "0110000"; -- E
+            when "1111" =>
+                Segments <= "0111000"; -- F
+            when others =>
+                Segments <= "1111111"; -- Invalid input
+        end case;
+    end process;
+end hexdisplay;

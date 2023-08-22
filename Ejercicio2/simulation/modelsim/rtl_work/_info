@@ -9,131 +9,189 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/simulation/modelsim
-Efulladder4bit_tb
-Z1 w1692653332
-Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 1
+Efourbitadder
+Z1 w1692746484
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
 R0
-Z6 8C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder4Bit_tb.vhd
-Z7 FC:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder4Bit_tb.vhd
+Z7 8C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder_1bit.vhd
+Z8 FC:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder_1bit.vhd
 l0
-L6 1
-V3JA3Th4eRJJ`jGOCJXL`e2
-!s100 mR>3ic=IzUQ_1nY7ePMZl3
-Z8 OV;C;2020.1;71
+L22 1
+VG;z=cQ0gDUJYIbB][Jdmz3
+!s100 n^<3MR3mQk5n;j=4gYaY]0
+Z9 OV;C;2020.1;71
 31
-Z9 !s110 1692653412
+Z10 !s110 1692747247
 !i10b 1
-Z10 !s108 1692653412.000000
-Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder4Bit_tb.vhd|
-!s107 C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder4Bit_tb.vhd|
+Z11 !s108 1692747247.000000
+Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder_1bit.vhd|
+Z13 !s107 C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder_1bit.vhd|
 !i113 1
-Z12 o-93 -work work
-Z13 tExplicit 1 CvgOpt 0
-Afulladder4bit_tb
+Z14 o-93 -work work
+Z15 tExplicit 1 CvgOpt 0
+Afourbitadder
 R2
 R3
 R4
 R5
+R6
+DEx4 work 12 fourbitadder 0 22 G;z=cQ0gDUJYIbB][Jdmz3
+!i122 0
+l38
+L29 17
+V<E>Z1c<J@C2NNKH:Q:HBU0
+!s100 G?hFDj2YNk5nB3Uj[Jh[30
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Efulladder4bit_tb
+Z16 w1692747209
+R3
+R2
+R5
+R6
+!i122 1
+R0
+Z17 8C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder4Bit_tb.vhd
+Z18 FC:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder4Bit_tb.vhd
+l0
+L6 1
+V3JA3Th4eRJJ`jGOCJXL`e2
+!s100 mR>3ic=IzUQ_1nY7ePMZl3
+R9
+31
+R10
+!i10b 1
+R11
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder4Bit_tb.vhd|
+!s107 C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder4Bit_tb.vhd|
+!i113 1
+R14
+R15
+Afourbitadder_tb
+R3
+R2
+R5
+R6
 DEx4 work 16 fulladder4bit_tb 0 22 3JA3Th4eRJJ`jGOCJXL`e2
 !i122 1
-l22
-L9 51
-V0<V42fdP3EL2G_N^oia473
-!s100 jMY@n=_JWOLTN?[[@Oj`P3
-R8
-31
+l29
+L9 44
+V;0MCD4`[giVmQJ8@bz]JW1
+!s100 Eg18=GLDF`<kNPKEm=W;b3
 R9
-!i10b 1
+31
 R10
+!i10b 1
 R11
-Z14 !s107 C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder4Bit_tb.vhd|
-!i113 1
-R12
-R13
-Efulladder_1bit
-Z15 w1692589951
-R4
-R5
-!i122 0
-R0
-Z16 8C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder_1bit.vhd
-Z17 FC:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder_1bit.vhd
-l0
-L4 1
-V7l0Pk8Ae=4<_]W:>ZIBz70
-!s100 mV^1?c=;UUD[;VWPc6>ze3
-R8
-31
-R9
-!i10b 1
-R10
-Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder_1bit.vhd|
-Z19 !s107 C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder_1bit.vhd|
-!i113 1
-R12
-R13
-Afull_adder1bit
-R4
-R5
-Z20 DEx4 work 14 fulladder_1bit 0 22 7l0Pk8Ae=4<_]W:>ZIBz70
-!i122 0
-l10
-L9 5
-VALmnliHUXLCz7Nk4PEI[G1
-!s100 mO_XAcdINnFhhjQM:?aBz3
-R8
-31
-R9
-!i10b 1
-R10
-R18
 R19
+Z20 !s107 C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder4Bit_tb.vhd|
 !i113 1
-R12
-R13
-Efulladder_4bit
+R14
 R15
+Efulladder_1bit
+R1
+R2
+R3
 R4
 R5
+R6
 !i122 0
 R0
-R16
-R17
-l0
-L18 1
-V^[hJkQjFZobYl=_aSNZ<S3
-!s100 PYDSo4JUWLcZF<;M=F]n]0
+R7
 R8
-31
+l0
+L6 1
+VF4oR1NKP<_2Kl^AF[8J>n3
+!s100 bf]7a4Aj^FYNfocWaMMOL0
 R9
-!i10b 1
+31
 R10
-R18
-R19
-!i113 1
+!i10b 1
+R11
 R12
 R13
-Afulladder_4bit
-R20
+!i113 1
+R14
+R15
+Afulladder
+R2
+R3
 R4
 R5
-DEx4 work 14 fulladder_4bit 0 22 ^[hJkQjFZobYl=_aSNZ<S3
+R6
+DEx4 work 14 fulladder_1bit 0 22 F4oR1NKP<_2Kl^AF[8J>n3
 !i122 0
-l28
-L25 20
-VKbC234SmM9VTN^o3NTDbZ1
-!s100 ]^>:nA_0QAVAZcSG5OKRM2
-R8
-31
+l12
+L11 5
+VXJHjbQ^BZ14EZC]o`ZeMP3
+!s100 oEcOPU9::TEkPhd4lV:hH2
 R9
-!i10b 1
+31
 R10
-R18
-R19
-!i113 1
+!i10b 1
+R11
 R12
 R13
+!i113 1
+R14
+R15
+Ehexdisplay
+R1
+R2
+R3
+R4
+R5
+R6
+!i122 0
+R0
+R7
+R8
+l0
+L52 1
+VFaUAQjM=0?A[2IC0feEen3
+!s100 44dz?J=?6doUa>@AYg1:h0
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Ahexdisplay
+R2
+R3
+R4
+R5
+R6
+DEx4 work 10 hexdisplay 0 22 FaUAQjM=0?A[2IC0feEen3
+!i122 0
+l58
+L57 42
+V?aak2TIeMaiOEe2XiW>C^3
+!s100 ^IH4o9KKjgazJRTe0?7C^1
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15

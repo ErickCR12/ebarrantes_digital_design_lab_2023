@@ -3,57 +3,50 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-entity FullAdder4Bit_tb is -- no inputs or outputs
+entity FullAdder4Bit_tb is
 end FullAdder4Bit_tb;
 
-architecture fulladder4bit_tb of FullAdder4Bit_tb is
-	component FullAdder_4bit
-		Port ( A : in STD_LOGIC_VECTOR(3 downto 0);
-				 B : in STD_LOGIC_VECTOR(3 downto 0);
-				 Cin : in STD_LOGIC;
-				 Sum : out STD_LOGIC_VECTOR(3 downto 0);
-				 Cout : out STD_LOGIC);
-	end component;
-	signal A, B : STD_LOGIC_VECTOR(3 downto 0);
-	signal Cin : STD_LOGIC;
-	signal Sum : STD_LOGIC_VECTOR(3 downto 0);
-	signal Cout : STD_LOGIC;
-
+architecture fourbitadder_tb of FullAdder4Bit_tb is
+    signal A, B : STD_LOGIC_VECTOR(3 downto 0);
+    signal Cin : STD_LOGIC;
+    signal Sum : STD_LOGIC_VECTOR(3 downto 0);
+    signal Cout : STD_LOGIC;
+    
+    signal DisplayA, DisplayB, DisplaySum : STD_LOGIC_VECTOR(6 downto 0);
+    
+    component FourBitAdder
+        Port ( A, B : in STD_LOGIC_VECTOR(3 downto 0);
+               Cin : in STD_LOGIC;
+               Sum : out STD_LOGIC_VECTOR(3 downto 0);
+               Cout : out STD_LOGIC);
+    end component;
+    
+    component HexDisplay
+        Port ( HexValue : in STD_LOGIC_VECTOR(3 downto 0);
+               Segments : out STD_LOGIC_VECTOR(6 downto 0));
+    end component;
+    
 begin
-	-- Instancia del sumador
-	UUT: FullAdder_4bit port map (A, B, Cin, Sum, Cout);
-	process begin
-		-- Establecer valores iniciales
-		A <= "0000";
-		B <= "0000";
-		Cin <= '0';
-		wait for 0.2 ns;
-
-		-- Prueba 1
-		A <= "0101";
-		B <= "0010";
-		Cin <= '0';
-		wait for 0.2 ns;
-
-		-- Prueba 2
-		A <= "1100";
-		B <= "1011";
-		Cin <= '1';
-		wait for 0.2 ns;
-
-		-- Prueba 3
-		A <= "1111";
-		B <= "0001";
-		Cin <= '0';
-		wait for 0.2 ns;
-
-		-- Prueba 4
-		A <= "1010";
-		B <= "0101";
-		Cin <= '1';
-		wait for 0.2 ns;
-
-		-- Detener la simulación
-		wait;
-	end process;
-end;
+    UUT: FourBitAdder port map (A, B, Cin, Sum, Cout);
+    
+    DisplayA_UUT: HexDisplay port map (A, DisplayA);
+    DisplayB_UUT: HexDisplay port map (B, DisplayB);
+    DisplaySum_UUT: HexDisplay port map (Sum, DisplaySum);
+    
+    process
+    begin
+        A <= "0000"; B <= "0000"; Cin <= '0';
+        wait for 0.2 ns;
+        
+        A <= "0010"; B <= "1011"; Cin <= '1';
+        wait for 0.2 ns;
+        
+        A <= "1101"; B <= "0110"; Cin <= '0';
+        wait for 0.2 ns;
+        
+        A <= "1010"; B <= "1001"; Cin <= '1';
+        wait for 0.2 ns;
+        
+        wait;
+    end process;
+end fourbitadder_tb;
