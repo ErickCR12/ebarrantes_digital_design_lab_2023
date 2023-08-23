@@ -1,23 +1,28 @@
 module sevenSegmentsLogic_tb();
 
-	reg[5:0] in;
-	reg[6:0] out;
+	reg[5:0] counter_out;
+	reg[7:0] bcd_out;
+	reg[6:0] display1_out, display2_out;
 	
-	sevenSegmentsLogic modulo(in, out);
-	
+	binaryToBCD bcd_converter (
+        .bin(counter_out),
+        .bcd(bcd_out)
+    );
+
+    sevenSegmentsDeco segment_display1 (
+        .bcd(bcd_out[3:0]),
+        .display(display1_out)
+    );
+	 
+	 sevenSegmentsDeco segment_display2 (
+        .bcd(bcd_out[7:4]),
+        .display(display2_out)
+    );	
 	initial begin
-		in = 6'b000001;
-		#50;
-		in = 6'b001010;
-		#50;
-		in = 6'b010100;
-		#50;
-		in = 6'b011110;
-		#50;
-		in = 6'b101000;
-		#50;
-		in = 6'b110010;
-		#50;
-		in = 6'b111111;
+		counter_out = 6'b111111;
+		#200;
+		counter_out = 6'b001010;		
+		#200;
+		counter_out = 6'b000111;
 	end
 endmodule

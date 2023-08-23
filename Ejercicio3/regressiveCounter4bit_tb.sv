@@ -3,7 +3,7 @@ module regressiveCounter4bit_tb();
 	reg [3:0] in, out;
 	logic decrement, reset;
 	
-	regressiveCounter #(4) modulo(in, decrement, reset, out);
+	regressiveCounterLogic #(4) modulo(in, decrement, reset, out);
 	
 	initial begin
 		in = 4'b1011;
