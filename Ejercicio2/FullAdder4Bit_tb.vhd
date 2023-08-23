@@ -6,47 +6,53 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity FullAdder4Bit_tb is
 end FullAdder4Bit_tb;
 
-architecture fourbitadder_tb of FullAdder4Bit_tb is
+architecture Behavioral of FullAdder4Bit_tb is
     signal A, B : STD_LOGIC_VECTOR(3 downto 0);
-    signal Cin : STD_LOGIC;
-    signal Sum : STD_LOGIC_VECTOR(3 downto 0);
-    signal Cout : STD_LOGIC;
+    signal Cin, Cout : STD_LOGIC;
+    signal Segments : STD_LOGIC_VECTOR(6 downto 0);
     
-    signal DisplayA, DisplayB, DisplaySum : STD_LOGIC_VECTOR(6 downto 0);
+    constant clock_period : time := 0.2 ns; -- Simulation clock period
     
-    component FourBitAdder
-        Port ( A, B : in STD_LOGIC_VECTOR(3 downto 0);
-               Cin : in STD_LOGIC;
-               Sum : out STD_LOGIC_VECTOR(3 downto 0);
-               Cout : out STD_LOGIC);
-    end component;
-    
-    component HexDisplay
-        Port ( HexValue : in STD_LOGIC_VECTOR(3 downto 0);
-               Segments : out STD_LOGIC_VECTOR(6 downto 0));
-    end component;
+    -- Test cases
+    constant operand_1 : STD_LOGIC_VECTOR(3 downto 0) := "0101";
+    constant operand_2 : STD_LOGIC_VECTOR(3 downto 0) := "0010";
+    constant operand_3 : STD_LOGIC_VECTOR(3 downto 0) := "1111";
+    constant operand_4 : STD_LOGIC_VECTOR(3 downto 0) := "1000";
     
 begin
-    UUT: FourBitAdder port map (A, B, Cin, Sum, Cout);
-    
-    DisplayA_UUT: HexDisplay port map (A, DisplayA);
-    DisplayB_UUT: HexDisplay port map (B, DisplayB);
-    DisplaySum_UUT: HexDisplay port map (Sum, DisplaySum);
-    
-    process
+    -- Instantiate the FourBitAdderWithHexDisplay component
+    uut : entity work.FullAdder4Bit
+        port map (
+            A => A,
+            B => B,
+            Cin => Cin,
+            Segments => Segments,
+            Cout => Cout
+        );
+        
+    -- Stimulus process
+    stimulus : process
     begin
-        A <= "0000"; B <= "0000"; Cin <= '0';
-        wait for 0.2 ns;
+        A <= operand_1;
+        B <= operand_2;
+        Cin <= '0';
+        wait for clock_period;
         
-        A <= "0010"; B <= "1011"; Cin <= '1';
-        wait for 0.2 ns;
+        A <= operand_3;
+        B <= operand_4;
+        Cin <= '1';
+        wait for clock_period;
         
-        A <= "1101"; B <= "0110"; Cin <= '0';
-        wait for 0.2 ns;
+        A <= operand_2;
+        B <= operand_4;
+        Cin <= '0';
+        wait for clock_period;
         
-        A <= "1010"; B <= "1001"; Cin <= '1';
-        wait for 0.2 ns;
+        A <= operand_1;
+        B <= operand_3;
+        Cin <= '1';
+        wait for clock_period;
         
         wait;
     end process;
-end fourbitadder_tb;
+end Behavioral;

@@ -51,6 +51,7 @@ vlib rtl_work
 vmap work rtl_work
 
 vcom -93 -work work {C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder_1bit.vhd}
+vcom -93 -work work {C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder4Bit.vhd}
 
 vcom -93 -work work {C:/Users/Marco/Desktop/TEC/IIS2023/TallerDisenoDigital/ebarrantes_digital_design_lab_2023/Ejercicio2/FullAdder4Bit_tb.vhd}
 
