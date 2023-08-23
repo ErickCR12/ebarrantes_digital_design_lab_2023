@@ -1,4 +1,4 @@
- -- Copyright (C) 2020  Intel Corporation. All rights reserved.
+ -- Copyright (C) 2023  Intel Corporation. All rights reserved.
  -- Your use of Intel Corporation's design tools, logic functions 
  -- and other software and tools, and any partner logic 
  -- functions, and any output files from any of the foregoing 
@@ -74,7 +74,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 CHIP  "Ejercicio1"  ASSIGNED TO AN: 5CSEMA5F31C6
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -252,9 +252,9 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AE22      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE23      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE24      :        :                   :         : 4A        :                
 VCCIO4A                      : AE25      : power  :                   : 2.5V    : 4A        :                
-sev[8]                       : AE26      : output : 2.5 V             :         : 5A        : Y              
-sev[7]                       : AE27      : output : 2.5 V             :         : 5A        : Y              
-sev[6]                       : AE28      : output : 2.5 V             :         : 5A        : Y              
+sev[6]                       : AE26      : output : 2.5 V             :         : 5A        : Y              
+sev[5]                       : AE27      : output : 2.5 V             :         : 5A        : Y              
+sev[4]                       : AE28      : output : 2.5 V             :         : 5A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE29      :        :                   :         : 5B        :                
 VCCIO5B                      : AE30      : power  :                   : 2.5V    : 5B        :                
 GND                          : AF1       : gnd    :                   :         :           :                
@@ -284,7 +284,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AF24      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF25      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF26      :        :                   :         : 4A        :                
 GND                          : AF27      : gnd    :                   :         :           :                
-sev[4]                       : AF28      : output : 2.5 V             :         : 5A        : Y              
+sev[2]                       : AF28      : output : 2.5 V             :         : 5A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF29      :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF30      :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG1       :        :                   :         : 3A        :                
@@ -313,8 +313,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AG23      :        :                   :      
 GND                          : AG24      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG25      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG26      :        :                   :         : 4A        :                
-sev[5]                       : AG27      : output : 2.5 V             :         : 5A        : Y              
-sev[3]                       : AG28      : output : 2.5 V             :         : 5A        : Y              
+sev[3]                       : AG27      : output : 2.5 V             :         : 5A        : Y              
+sev[1]                       : AG28      : output : 2.5 V             :         : 5A        : Y              
 VCCIO5A                      : AG29      : power  :                   : 2.5V    : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG30      :        :                   :         : 5A        :                
 GND                          : AH1       : gnd    :                   :         :           :                
@@ -344,9 +344,9 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AH24      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH25      :        :                   :         : 4A        :                
 VCCIO4A                      : AH26      : power  :                   : 2.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH27      :        :                   :         : 4A        :                
-sev[2]                       : AH28      : output : 2.5 V             :         : 5A        : Y              
-sev[0]                       : AH29      : output : 2.5 V             :         : 5A        : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH30      :        :                   :         : 5A        :                
+sev[0]                       : AH28      : output : 2.5 V             :         : 5A        : Y              
+sev[7]                       : AH29      : output : 2.5 V             :         : 5A        : Y              
+sev[8]                       : AH30      : output : 2.5 V             :         : 5A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ1       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ2       :        :                   :         : 3A        :                
 GND                          : AJ3       : gnd    :                   :         :           :                
@@ -375,7 +375,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AJ25      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ26      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ27      :        :                   :         : 4A        :                
 GND                          : AJ28      : gnd    :                   :         :           :                
-sev[1]                       : AJ29      : output : 2.5 V             :         : 5A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AJ29      :        :                   :         : 5A        :                
 GND                          : AJ30      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK2       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK3       :        :                   :         : 3B        :                

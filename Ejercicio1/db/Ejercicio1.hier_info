@@ -63,14 +63,14 @@ sw[3] => Equal12.IN0
 sw[3] => Equal13.IN0
 sw[3] => Equal14.IN0
 sw[3] => Equal15.IN0
-sev[0] << sev[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-sev[1] << sev[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-sev[2] << sev[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-sev[3] << sev[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
-sev[4] << sev[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
-sev[5] << sev[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
-sev[6] << sev[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
-sev[7] << sev[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
-sev[8] << sev[8]$latch.DB_MAX_OUTPUT_PORT_TYPE
+sev[0] <= sev[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+sev[1] <= sev[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+sev[2] <= sev[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+sev[3] <= sev[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+sev[4] <= sev[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+sev[5] <= sev[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+sev[6] <= sev[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+sev[7] <= sev[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+sev[8] <= sev[8]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
