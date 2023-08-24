@@ -1,0 +1,62 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity FullAdder4Bit_tb is
+end FullAdder4Bit_tb;
+
+architecture fulladder4bit_tb of FullAdder4Bit_tb is
+    signal A, B : STD_LOGIC_VECTOR(3 downto 0);
+    signal Cin : STD_LOGIC;
+    signal Sum : STD_LOGIC_VECTOR(3 downto 0);
+    signal Cout : STD_LOGIC;
+
+    component FullAdder4Bit
+        Port ( A : in STD_LOGIC_VECTOR(3 downto 0);
+               B : in STD_LOGIC_VECTOR(3 downto 0);
+               Cin : in STD_LOGIC;
+               Sum : out STD_LOGIC_VECTOR(3 downto 0);
+               Cout : out STD_LOGIC);
+    end component;
+
+begin
+    -- Instancia del sumador
+    UUT: FullAdder4Bit port map (A, B, Cin, Sum, Cout);
+
+    -- Establecer valores iniciales
+    A <= "0000";
+    B <= "0000";
+    Cin <= '0';
+    
+    -- Prueba 1
+    A <= "0101";
+    B <= "0010";
+    Cin <= '0';
+    wait for 10 ns;
+    report "Prueba 1 - Suma: " & to_hstring(Sum) & ", Carry-out: " & to_hstring(Cout);
+    
+    -- Prueba 2
+    A <= "1100";
+    B <= "1011";
+    Cin <= '1';
+    wait for 10 ns;
+    report "Prueba 2 - Suma: " & to_hstring(Sum) & ", Carry-out: " & to_hstring(Cout);
+    
+    -- Prueba 3
+    A <= "1111";
+    B <= "0001";
+    Cin <= '0';
+    wait for 10 ns;
+    report "Prueba 3 - Suma: " & to_hstring(Sum) & ", Carry-out: " & to_hstring(Cout);
+    
+    -- Prueba 4
+    A <= "1010";
+    B <= "0101";
+    Cin <= '1';
+    wait for 10 ns;
+    report "Prueba 4 - Suma: " & to_hstring(Sum) & ", Carry-out: " & to_hstring(Cout);
+    
+    -- Detener la simulación
+    wait;
+end fulladder4bit_tb;
