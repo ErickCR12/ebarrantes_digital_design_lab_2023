@@ -1,0 +1,113 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/simulation/modelsim
+vshift
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1694062990
+!i10b 1
+!s100 0Gm=1BY0aG^k]V6KmDOa81
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+InLdNZYUX9QGQ96gYNhchY0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z5 w1694062932
+Z6 8C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/shift.sv
+Z7 FC:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/shift.sv
+!i122 0
+L0 1 10
+Z8 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z9 !s108 1694062990.000000
+Z10 !s107 C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/shift.sv|
+Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3|C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/shift.sv|
+!i113 1
+Z12 o-sv -work work
+Z13 !s92 -sv -work work +incdir+C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3
+Z14 tCvgOpt 0
+vshift_left
+R1
+R2
+!i10b 1
+!s100 S3M[[@?DK:]lg56zjz5BX2
+R3
+I3VUl<^JN<APZdze`0lMKG3
+R4
+S1
+R0
+R5
+R6
+R7
+!i122 0
+L0 12 13
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vshift_right
+R1
+R2
+!i10b 1
+!s100 VL[KQOR>K1nF17bB:YH851
+R3
+I@m9l_VzX_:HnVRh<9hXBV3
+R4
+S1
+R0
+R5
+R6
+R7
+!i122 0
+L0 26 13
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vshift_right_tb
+R2
+!i10b 1
+!s100 VgcTmDb49ECH@6zaWFNR`1
+R3
+IYkV]76B3YaF[dA?@Vab8E0
+R4
+R0
+w1694062953
+8C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/shift_right_tb.v
+FC:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/shift_right_tb.v
+!i122 1
+L0 1 22
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/shift_right_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3|C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/shift_right_tb.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3
+R14
