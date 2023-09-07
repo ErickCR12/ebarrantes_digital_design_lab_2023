@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Wed Sep  6 23:02:45 2023
+Analysis & Elaboration Status : Successful - Thu Sep  7 16:10:20 2023
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : ALU
-Top-level Entity Name : shift
+Top-level Entity Name : shift_left
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge
