@@ -7,6 +7,6 @@ module rest(input A,
 	always @(A or B or bin)
 		begin
 			D = A ^ B ^ bin;
-			bout = (~a & b) | (~(a ^ b) & bin);
+			bout = (~A & B) | (~(A ^ B) & bin);
 		end
 endmodule

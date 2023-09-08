@@ -1,40 +1,11 @@
-|shift
-in[0] => ~NO_FANOUT~
-in[1] => ~NO_FANOUT~
-amountShift[0] => ~NO_FANOUT~
-amountShift[1] => ~NO_FANOUT~
-amountShift[2] => ~NO_FANOUT~
-amountShift[3] => ~NO_FANOUT~
-amountShift[4] => ~NO_FANOUT~
-amountShift[5] => ~NO_FANOUT~
-amountShift[6] => ~NO_FANOUT~
-amountShift[7] => ~NO_FANOUT~
-amountShift[8] => ~NO_FANOUT~
-amountShift[9] => ~NO_FANOUT~
-amountShift[10] => ~NO_FANOUT~
-amountShift[11] => ~NO_FANOUT~
-amountShift[12] => ~NO_FANOUT~
-amountShift[13] => ~NO_FANOUT~
-amountShift[14] => ~NO_FANOUT~
-amountShift[15] => ~NO_FANOUT~
-amountShift[16] => ~NO_FANOUT~
-amountShift[17] => ~NO_FANOUT~
-amountShift[18] => ~NO_FANOUT~
-amountShift[19] => ~NO_FANOUT~
-amountShift[20] => ~NO_FANOUT~
-amountShift[21] => ~NO_FANOUT~
-amountShift[22] => ~NO_FANOUT~
-amountShift[23] => ~NO_FANOUT~
-amountShift[24] => ~NO_FANOUT~
-amountShift[25] => ~NO_FANOUT~
-amountShift[26] => ~NO_FANOUT~
-amountShift[27] => ~NO_FANOUT~
-amountShift[28] => ~NO_FANOUT~
-amountShift[29] => ~NO_FANOUT~
-amountShift[30] => ~NO_FANOUT~
-amountShift[31] => ~NO_FANOUT~
-isLeft => ~NO_FANOUT~
-out[0] <= <GND>
-out[1] <= <GND>
+|sum
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
