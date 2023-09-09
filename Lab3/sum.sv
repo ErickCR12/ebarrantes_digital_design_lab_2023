@@ -7,6 +7,6 @@ module sum(input A,
 	always @(A or B or cin)
 		begin
 			sum = A ^ B ^ cin;
-			cout = A&B | (A^B) & cin;
+			cout = A & B | (A ^ B) & cin;
 		end
 endmodule
