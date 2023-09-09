@@ -1,5 +1,5 @@
 Analysis & Elaboration report for ALU
-Thu Sep  7 18:29:17 2023
+Sat Sep  9 16:38:02 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -11,6 +11,7 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
   5. Analysis & Elaboration Messages
+  6. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -37,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Sep  7 18:29:17 2023          ;
+; Analysis & Elaboration Status ; Successful - Sat Sep  9 16:38:02 2023          ;
 ; Quartus Prime Version         ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                 ; ALU                                            ;
 ; Top-level Entity Name         ; sum                                            ;
@@ -161,32 +162,56 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Thu Sep  7 18:29:09 2023
+    Info: Processing started: Sat Sep  9 16:37:54 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file xor_n_bits_tb.sv
+    Info (12023): Found entity 1: xor_N_bits_tb File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/xor_N_bits_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file xor_n_bits.sv
+    Info (12023): Found entity 1: xor_N_bits File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/xor_N_bits.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file xor1bit.sv
+    Info (12023): Found entity 1: xor1bit File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/xor1bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file or_n_bits_tb.sv
+    Info (12023): Found entity 1: or_N_bits_tb File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/or_N_bits_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file or_n_bits.sv
+    Info (12023): Found entity 1: or_N_bits File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/or_N_bits.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file or1bit.sv
+    Info (12023): Found entity 1: or1bit File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/or1bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file division.sv
+    Info (12023): Found entity 1: Divsion File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/Division.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file and_n_bits_tb.sv
+    Info (12023): Found entity 1: and_N_bits_tb File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/and_N_bits_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file and_n_bits.sv
+    Info (12023): Found entity 1: and_N_bits File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/and_N_bits.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file and1bit.sv
+    Info (12023): Found entity 1: and1bit File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/and1bit.sv Line: 1
 Info (12021): Found 3 design units, including 3 entities, in source file shift.sv
-    Info (12023): Found entity 1: shift File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Lab3/shift.sv Line: 1
-    Info (12023): Found entity 2: shift_left File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Lab3/shift.sv Line: 12
-    Info (12023): Found entity 3: shift_right File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Lab3/shift.sv Line: 26
+    Info (12023): Found entity 1: shift File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/shift.sv Line: 1
+    Info (12023): Found entity 2: shift_left File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/shift.sv Line: 12
+    Info (12023): Found entity 3: shift_right File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/shift.sv Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file shift_left_tb.sv
-    Info (12023): Found entity 1: shift_left_tb File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Lab3/shift_left_tb.sv Line: 1
+    Info (12023): Found entity 1: shift_left_tb File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/shift_left_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shift_right_tb.v
-    Info (12023): Found entity 1: shift_right_tb File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Lab3/shift_right_tb.v Line: 1
+    Info (12023): Found entity 1: shift_right_tb File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/shift_right_tb.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sum.sv
-    Info (12023): Found entity 1: sum File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Lab3/sum.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file rest.sv
-    Info (12023): Found entity 1: rest File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Lab3/rest.sv Line: 1
+    Info (12023): Found entity 1: sum File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/sum.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sum_tb.sv
-    Info (12023): Found entity 1: sum_tb File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Lab3/sum_tb.sv Line: 1
+    Info (12023): Found entity 1: sum_tb File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/sum_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rest_tb.sv
-    Info (12023): Found entity 1: rest_tb File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Lab3/rest_tb.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at sum_tb.sv(9): created implicit net for "out" File: C:/Users/aleji/Desktop/Lab2/ebarrantes_digital_design_lab_2023/Lab3/sum_tb.sv Line: 9
+    Info (12023): Found entity 1: rest_tb File: C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/rest_tb.sv Line: 1
 Info (12127): Elaborating entity "sum" for the top level hierarchy
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4781 megabytes
-    Info: Processing ended: Thu Sep  7 18:29:17 2023
+Info (144001): Generated suppressed messages file C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/output_files/ALU.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4777 megabytes
+    Info: Processing ended: Sat Sep  9 16:38:02 2023
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Total CPU time (on all processors): 00:00:09
+
+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in C:/Users/erick/Documents/TEC/2023-IISemestre/TallerDigitales/Laboratorios/2/ebarrantes_digital_design_lab_2023/Lab3/output_files/ALU.map.smsg.
 
 

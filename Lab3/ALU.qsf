@@ -52,27 +52,44 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name SYSTEMVERILOG_FILE shift.sv
-set_global_assignment -name SYSTEMVERILOG_FILE shift_left_tb.sv
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH shift_right_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH rest_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME shift_left_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id shift_left_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME shift_left_tb -section_id shift_left_tb
-set_global_assignment -name VERILOG_FILE shift_right_tb.v
 set_global_assignment -name EDA_TEST_BENCH_NAME shift_right_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id shift_right_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME shift_right_tb -section_id shift_right_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE shift_left_tb.sv -section_id shift_left_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE shift_right_tb.v -section_id shift_right_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME sum_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id sum_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME sum_tb -section_id sum_tb
+set_global_assignment -name SYSTEMVERILOG_FILE xor_N_bits_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE xor_N_bits.sv
+set_global_assignment -name SYSTEMVERILOG_FILE xor1bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE or_N_bits_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE or_N_bits.sv
+set_global_assignment -name SYSTEMVERILOG_FILE or1bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Division.sv
+set_global_assignment -name SYSTEMVERILOG_FILE and_N_bits_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE and_N_bits.sv
+set_global_assignment -name SYSTEMVERILOG_FILE and1bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shift.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shift_left_tb.sv
+set_global_assignment -name VERILOG_FILE shift_right_tb.v
 set_global_assignment -name SYSTEMVERILOG_FILE sum.sv
-set_global_assignment -name SYSTEMVERILOG_FILE rest.sv
 set_global_assignment -name SYSTEMVERILOG_FILE sum_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE rest_tb.sv
+set_global_assignment -name EDA_TEST_BENCH_FILE shift_left_tb.sv -section_id shift_left_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE shift_right_tb.v -section_id shift_right_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE sum_tb.sv -section_id sum_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME rest_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id rest_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME rest_tb -section_id rest_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE rest_tb.sv -section_id rest_tb
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

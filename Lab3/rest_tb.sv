@@ -5,17 +5,17 @@ module rest_tb();
 	wire res;
 	wire bout;
 	
-	rest Resta(A, B, bin, res, bout);
+	sum Resta(A, ~B, bin, res, bout);
 		initial begin
 			A = 1;
 			B = 1;
-			bin = 0;
+			bin = 1;
 			#40
 			A = 1;
 			B = 0;
 			bin = 1;
 			#40
-			A = 1;
+			A = 0;
 			B = 1;
 			bin = 1;
 		end

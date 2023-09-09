@@ -6,7 +6,7 @@ module sum_tb();
 	wire suma;
 	wire cout;
 	
-	sum Suma(A, B, cin, suma, out);
+	sum Suma(A, B, cin, suma, cout);
 		initial begin
 			A = 1;
 			B = 1;
