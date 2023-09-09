@@ -1,0 +1,22 @@
+module shift_left_tb();
+
+	reg[3:0] in, out;
+	integer amount;
+	
+	shift_left #(4) modulo(in, amount, out);
+	
+	initial begin
+		in = 4'b1101;
+		amount = 2;
+		
+		#50
+		
+		in = 4b'0001;
+		amount = 3;
+		
+		#50
+		
+		in = 4b'1111;
+		amount = 5;
+
+endmodule

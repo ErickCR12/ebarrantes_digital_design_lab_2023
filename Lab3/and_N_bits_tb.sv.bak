@@ -1,0 +1,19 @@
+module and_N_bits_tb;
+    wire result;
+    
+    and_N_bits and_N_inst (
+        .inputs({input_a, input_b, input_c}), // Aquí debes proporcionar tus entradas de N bits
+        .y(result)
+    );
+    
+    initial begin
+        // Inicializa tus entradas aquí
+        input_a = 1'b1;
+        input_b = 1'b0;
+        input_c = 1'b1;
+        
+        #10; // Espera un poco para que las señales tengan tiempo de propagación
+        
+        $display("Resultado: %b", result);
+    end
+endmodule
