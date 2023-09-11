@@ -1,4 +1,4 @@
-module and_N_bits_tb;
+module and_N_bits_tb();
 	// Parámetros
 	parameter N = 4;
 	
