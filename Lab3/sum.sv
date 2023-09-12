@@ -1,6 +1,6 @@
-module sum(input A,
-			  input B,
-			  input cin,
+module sum(input logic A,
+			  input logic B,
+			  input logic cin,
 			  output logic sum,
 			  output logic cout);
 	
