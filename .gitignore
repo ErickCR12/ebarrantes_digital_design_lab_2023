@@ -1,0 +1,10 @@
+# ignore everything
+*
+
+# but don't ignore files ending with slash = directories
+!*/
+!.gitignore
+!*.sv
+!*.qpf
+!*.qsf
+Tarea 2/
