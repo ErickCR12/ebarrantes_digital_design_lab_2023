@@ -50,7 +50,6 @@ module FSMbuscaminas_tb();
 		bomba = 1;
 		#250
 		
-		bomba=0
 		seleccionarCasilla = 0;
 		#500
 		
