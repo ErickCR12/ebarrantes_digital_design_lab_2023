@@ -1,5 +1,5 @@
 module FSMbuscaminas(
-	input iniciar, esVictoria, movimientoValido, seleccionarCasilla, bomba, marcarBandera, clk, rst,
+	input iniciar, tableroGenerado, esVictoria, movimientoValido, seleccionarCasilla, bomba, marcarBandera, clk, rst,
 	output enable_matriz, enable_victoria, enable_mov, enable_seleccion, enable_derrota, enable_casillas, enable_bandera
 );
 
@@ -14,7 +14,7 @@ module FSMbuscaminas(
 	always_comb
 		case(state)
 			4'b0000: if(iniciar) next_state = 4'b0001; else next_state = 4'b0000;
-			4'b0001: next_state = 4'b0010;
+			4'b0001: if(tableroGenerado) next_state = 4'b0010; else next_state = 4'b0001;
 			4'b0010: if(esVictoria) next_state = 4'b0011; else next_state = 4'b0100;
 			4'b0011: next_state = 4'b0011;
 			4'b0100: if(movimientoValido) next_state = 4'b0101; else next_state = 4'b0110;

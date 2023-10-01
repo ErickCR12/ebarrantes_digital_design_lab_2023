@@ -1,24 +1,20 @@
 module generador_aleatorio (
-    input clk, rst,
+    input clk, rst, input reg[2:0] seed,
     output [2:0] rnd 
 );
 
-	reg [2:0] data_next, data;
+	wire feedback;
+	reg[2:0] data;
 
-   always_comb begin
-      data_next = data;
-      repeat(3) begin
-         data_next = {(data_next[2]^data_next[0]), data_next[2:1]};
-      end
-   end
+	assign feedback = ~(rnd[2] ^ rnd[1]);
 
-   always_ff @(posedge clk or posedge rst) begin
-      if(rst)
-         data <= 5'h1f;
-      else
-         data <= data_next;
-   end
-	
+	always @(posedge clk, posedge rst) begin
+		if (rst)
+			data = seed;
+		else
+			data = {rnd[1:0],feedback};
+	end
+
 	assign rnd = data;
-	
+
 endmodule

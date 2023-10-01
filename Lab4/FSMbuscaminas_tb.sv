@@ -1,6 +1,6 @@
 module FSMbuscaminas_tb();
 
-	logic iniciar, esVictoria, movimientoValido, seleccionarCasilla, bomba, marcarBandera, clk, rst,
+	logic iniciar, tableroGenerado, esVictoria, movimientoValido, seleccionarCasilla, bomba, marcarBandera, clk, rst,
 			enable_matriz, enable_victoria, enable_mov, enable_seleccion, enable_derrota, enable_casillas, enable_bandera;
 			
 	always begin
@@ -9,12 +9,13 @@ module FSMbuscaminas_tb();
 	end
 	
 	FSMbuscaminas fsm (
-		iniciar, esVictoria, movimientoValido, seleccionarCasilla, bomba, marcarBandera, clk, rst,
+		iniciar, tableroGenerado, esVictoria, movimientoValido, seleccionarCasilla, bomba, marcarBandera, clk, rst,
 		enable_matriz, enable_victoria, enable_mov, enable_seleccion, enable_derrota, enable_casillas, enable_bandera
 	);
 	
 	initial begin
 		iniciar = 0;
+		tableroGenerado = 0;
 		esVictoria = 0;
 		movimientoValido = 0;
 		seleccionarCasilla = 0;
@@ -25,14 +26,21 @@ module FSMbuscaminas_tb();
 		
 		rst = 0;
 		iniciar = 1;
+		tableroGenerado = 1;
 		esVictoria = 1;
 		#250
 		
 		rst = 1;
+		iniciar = 0;
+		tableroGenerado = 0;
+		esVictoria = 0;
 		#250
 		
 		rst = 0;
 		iniciar = 1;
+		#100
+		
+		tableroGenerado = 1;
 		esVictoria = 0;
 		movimientoValido = 1;
 		#250

@@ -1,29 +1,38 @@
 module crearTablero(
 	input reg [7:0] cantBombas, input enable_matriz, clk, rst,
-	output reg [6:0] tablero [7:0][7:0], output reg [2:0] i_actual, output reg [2:0] j_actual
+	output reg [6:0] tablero [7:0][7:0], output reg [2:0] i_actual, output reg [2:0] j_actual, output tableroGenerado
 );
 
 	reg [6:0] temp [7:0][7:0];
-	reg [2:0] random_i, random_j;
-	reg [7:0] cont;
+	reg [2:0] random, i, j;
+	reg [7:0] bomb_count;
 	
+	generador_aleatorio ga (
+		clk, rst, cantBombas[2:0],
+		random
+	);
+
 	always_ff @(posedge clk or posedge rst) begin
-		if (rst) cont = 8'b0;
-		if (enable_matriz) begin
-			if (cont < cantBombas) begin
-				$random(seed);
-				random_i = $urandom_range(7);
-				random_j = $urandom_range(7);
-				temp[random_i][random_j] = 7'b1000000;
-			end
-			cont <= cont + 1;
+		if (rst) begin
+			for(int i = 0; i < 8; i++)
+				for(int j = 0; j < 8; j++)
+					temp[i][j] = 7'b0000000;
+			i = 0;
+			j = 0;
+			bomb_count = 0;
+		end else if (enable_matriz) begin
+			i = random + bomb_count + 4;
+			j = random + bomb_count*2 + 2;
+			temp[i][j][6] = 1'b1;
+			bomb_count = bomb_count + 1;
 		end
 	end
-	
+
 	assign tablero = temp;
-	assign i_actual = 0;
-	assign j_actual = 0;
-	
-	
+	assign i_actual = i;
+	assign j_actual = j;
+	assign tableroGenerado = (bomb_count >= cantBombas);
 	
 endmodule
+
+
