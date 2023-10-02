@@ -1,5 +1,5 @@
 module registroTablero (
-	input reg [7:0] cantBombas, input reg [2:0] i_actual, j_actual, input enable_matriz, enable_seleccion, enable_bandera, clk, rst,
+	input reg [7:0] cantBombas, input reg [2:0] i_actual, j_actual, input enable_matriz, enable_bandera, enable_casillas, clk, rst,
 	output reg[6:0] tablero[7:0][7:0], output tableroGenerado
 );
 

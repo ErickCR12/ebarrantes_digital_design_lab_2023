@@ -36,12 +36,15 @@ module buscaminas_tb();
 				
 		esAbajo = 1;
 		esDerecha = 1;
-		#300
+		#100
 		
 		esAbajo = 0;
 		esDerecha = 0;
 		marcarBandera = 1;
 		#100
+		
+		marcarBandera = 0;
+		seleccionarCasilla = 1;
 		
 		for (int i = 0; i < 8; i = i + 1)
 			for (int j = 0; j < 8; j = j + 1) 

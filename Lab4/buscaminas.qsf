@@ -92,4 +92,5 @@ set_global_assignment -name EDA_TEST_BENCH_FILE generador_aleatorio_tb.sv -secti
 set_global_assignment -name EDA_TEST_BENCH_FILE movement_tb.sv -section_id movement_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE buscaminas_tb.sv -section_id buscaminas_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE registroTablero_tb.sv -section_id registroTablero_tb
+set_global_assignment -name SYSTEMVERILOG_FILE comprobarBomba.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

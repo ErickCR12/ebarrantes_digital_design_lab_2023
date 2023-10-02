@@ -1,12 +1,12 @@
 module registroTablero_tb();
 
-	reg enable_matriz, enable_seleccion, enable_bandera, clk, rst, tableroGenerado;
+	reg enable_matriz, enable_casillas, enable_bandera, clk, rst, tableroGenerado;
 	reg [2:0] i_actual, j_actual;
 	reg [6:0] tablero [7:0][7:0]; 
 	reg [7:0] cantBombas; 
 		
 	registroTablero regtab(
-		cantBombas, i_actual, j_actual, enable_matriz, enable_seleccion, enable_bandera, clk, rst,
+		cantBombas, i_actual, j_actual, enable_matriz, enable_bandera, enable_casillas, clk, rst,
 		tablero, tableroGenerado
 	);
 	
@@ -22,7 +22,7 @@ module registroTablero_tb();
 		i_actual = 0;
 		j_actual = 0;
 		enable_matriz = 0;
-		enable_seleccion = 0;
+		enable_casillas = 0;
 		enable_bandera = 0;
 		rst = 0;
 		

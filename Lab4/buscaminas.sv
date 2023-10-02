@@ -17,7 +17,7 @@ module buscaminas (
 	);
 	
 	registroTablero regtab(
-		cantBombas, i_actual, j_actual, enable_matriz, enable_seleccion, enable_bandera, clk, rst,
+		cantBombas, i_actual, j_actual, enable_matriz, enable_bandera, enable_casillas, clk, rst,
 		tablero, tableroGenerado
 	);
 	
@@ -30,6 +30,11 @@ module buscaminas (
 	cambiarIndices ci(
 		i_next, j_next, enable_mov, clk, rst,
 		i_actual, j_actual
+	);
+	
+	comprobarBomba cb (
+		tablero, i_actual, j_actual, enable_seleccion, clk, rst,
+		bomba
 	);
 
 endmodule
