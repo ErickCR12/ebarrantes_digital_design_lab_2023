@@ -4,8 +4,8 @@ module movement(
 	output reg [2:0]i_next, j_next, output logic movimientoValido
 );
 				
-	always @(posedge clk or posedge rst) begin
-		if (rst) begin
+	always @(negedge clk or negedge rst) begin
+		if (!rst) begin
 			i_next = 0;
 			j_next = 0;
 		end else begin

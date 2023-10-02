@@ -3,8 +3,8 @@ module cambiarIndices (
 	output reg [2:0] i_actual, j_actual
 );
 
-	always_ff @(posedge clk or posedge rst) begin
-		if (rst) begin
+	always_ff @(negedge clk or negedge rst) begin
+		if (!rst) begin
 			i_actual = 0;
 			j_actual = 0;
 		end else if (enable_mov) begin

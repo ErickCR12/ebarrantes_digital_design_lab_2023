@@ -21,22 +21,22 @@ module FSMbuscaminas_tb();
 		seleccionarCasilla = 0;
 		bomba = 0;
 		marcarBandera = 0;
-		rst = 1;
+		rst = 0;
 		#70
 		
-		rst = 0;
+		rst = 1;
 		iniciar = 1;
 		tableroGenerado = 1;
 		esVictoria = 1;
 		#250
 		
-		rst = 1;
+		rst = 0;
 		iniciar = 0;
 		tableroGenerado = 0;
 		esVictoria = 0;
 		#250
 		
-		rst = 0;
+		rst = 1;
 		iniciar = 1;
 		#100
 		
@@ -61,7 +61,7 @@ module FSMbuscaminas_tb();
 		seleccionarCasilla = 0;
 		#500
 		
-		rst = 1;
+		rst = 0;
 	end	
 	
 endmodule

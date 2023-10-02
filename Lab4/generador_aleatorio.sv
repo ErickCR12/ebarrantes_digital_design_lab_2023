@@ -8,8 +8,8 @@ module generador_aleatorio (
 
 	assign feedback = ~(rnd[2] ^ rnd[1]);
 
-	always @(posedge clk, posedge rst) begin
-		if (rst)
+	always @(negedge clk, negedge rst) begin
+		if (!rst)
 			data = seed;
 		else
 			data = {rnd[1:0],feedback};

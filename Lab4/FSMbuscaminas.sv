@@ -6,8 +6,8 @@ module FSMbuscaminas(
 	logic [3:0] state, next_state;
 
 	//actual state logic
-	always_ff @(posedge clk or posedge rst)
-		if (rst) state = 4'b0000;
+	always_ff @(negedge clk or negedge rst)
+		if (!rst) state = 4'b0000;
 		else state = next_state;
 		
 	//next state logic

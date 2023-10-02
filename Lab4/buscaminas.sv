@@ -11,12 +11,12 @@ module buscaminas (
 	
 	
 	FSMbuscaminas fsm(
-	iniciar, tableroGenerado, esVictoria, movimientoValido, seleccionarCasilla, bomba, marcarBandera, clk, rst,
-	enable_matriz, enable_victoria, enable_mov, enable_seleccion, enable_derrota, enable_casillas, enable_bandera
+		iniciar, tableroGenerado, esVictoria, movimientoValido, seleccionarCasilla, bomba, marcarBandera, clk, rst,
+		enable_matriz, enable_victoria, enable_mov, enable_seleccion, enable_derrota, enable_casillas, enable_bandera
 	);
 	
-	crearTablero ct(
-		cantBombas, enable_matriz, clk, rst,
+	registroTablero regtab(
+		cantBombas, i_actual, j_actual, enable_matriz, enable_seleccion, enable_bandera, clk, rst,
 		tablero, tableroGenerado
 	);
 	
@@ -30,6 +30,5 @@ module buscaminas (
 		i_next, j_next, enable_mov, clk, rst,
 		i_actual, j_actual
 	);
-	
 
 endmodule
