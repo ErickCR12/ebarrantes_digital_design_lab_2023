@@ -2,7 +2,8 @@ module buscaminas (
 	input logic iniciar, seleccionarCasilla, esArriba, esDerecha, esIzquierda, esAbajo, marcarBandera, clk, rst,
 	input reg[7:0] cantBombas,
 	output reg[6:0] tablero [7:0][7:0],
-	output reg [2:0] i_actual, j_actual
+	output reg [2:0] i_actual, j_actual,
+	output logic [3:0] state
 );
 
 	logic tableroGenerado, esVictoria, movimientoValido, bomba; //inputs para fsm
@@ -12,7 +13,7 @@ module buscaminas (
 	
 	FSMbuscaminas fsm(
 		iniciar, tableroGenerado, esVictoria, movimientoValido, seleccionarCasilla, bomba, marcarBandera, clk, rst,
-		enable_matriz, enable_victoria, enable_mov, enable_seleccion, enable_derrota, enable_casillas, enable_bandera
+		enable_matriz, enable_victoria, enable_mov, enable_seleccion, enable_derrota, enable_casillas, enable_bandera, state
 	);
 	
 	registroTablero regtab(

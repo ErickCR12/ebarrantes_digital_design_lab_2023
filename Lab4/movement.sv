@@ -22,6 +22,6 @@ module movement(
 		end
 	end 
 	
-	assign movimientoValido = 1;
+	assign movimientoValido = (isUp || isRight || isLeft || isDown);
 					 
 endmodule
