@@ -1,6 +1,6 @@
 module crearTablero(
 	input reg [7:0] cantBombas, input enable_matriz, clk, rst,
-	output reg [6:0] tablero [7:0][7:0], output reg [2:0] i_actual, output reg [2:0] j_actual, output tableroGenerado
+	output reg [6:0] tablero [7:0][7:0], output tableroGenerado
 );
 
 	reg [6:0] temp [7:0][7:0];
@@ -29,8 +29,6 @@ module crearTablero(
 	end
 
 	assign tablero = temp;
-	assign i_actual = i;
-	assign j_actual = j;
 	assign tableroGenerado = (bomb_count >= cantBombas);
 	
 endmodule

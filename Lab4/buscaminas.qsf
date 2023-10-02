@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY movement
+set_global_assignment -name TOP_LEVEL_ENTITY buscaminas
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:07:11  SEPTEMBER 25, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.1 Lite Edition"
@@ -52,30 +52,43 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name SYSTEMVERILOG_FILE FSMbuscaminas.sv
-set_global_assignment -name SYSTEMVERILOG_FILE FSMbuscaminas_tb.sv
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH movement_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH buscaminas_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME FSMbuscaminas_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id FSMbuscaminas_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME FSMbuscaminas_tb -section_id FSMbuscaminas_tb
-set_global_assignment -name SYSTEMVERILOG_FILE crearTablero.sv
-set_global_assignment -name SYSTEMVERILOG_FILE crearTablero_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME crearTablero_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id crearTablero_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME crearTablero_tb -section_id crearTablero_tb
-set_global_assignment -name SYSTEMVERILOG_FILE generador_aleatorio.sv
-set_global_assignment -name SYSTEMVERILOG_FILE generador_aleatorio_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME generador_aleatorio_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id generador_aleatorio_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME generador_aleatorio_tb -section_id generador_aleatorio_tb
+set_global_assignment -name SYSTEMVERILOG_FILE movement_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE movement.sv
+set_global_assignment -name SYSTEMVERILOG_FILE FSMbuscaminas.sv
+set_global_assignment -name SYSTEMVERILOG_FILE FSMbuscaminas_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE crearTablero.sv
+set_global_assignment -name SYSTEMVERILOG_FILE crearTablero_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE generador_aleatorio.sv
+set_global_assignment -name SYSTEMVERILOG_FILE generador_aleatorio_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE buscaminas.sv
+set_global_assignment -name SYSTEMVERILOG_FILE cambiarIndices.sv
+set_global_assignment -name SYSTEMVERILOG_FILE buscaminas_tb.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME movement_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id movement_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME movement_tb -section_id movement_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME buscaminas_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id buscaminas_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME buscaminas_tb -section_id buscaminas_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE FSMbuscaminas_tb.sv -section_id FSMbuscaminas_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE crearTablero_tb.sv -section_id crearTablero_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE generador_aleatorio_tb.sv -section_id generador_aleatorio_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE movement_tb.sv -section_id movement_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE buscaminas_tb.sv -section_id buscaminas_tb
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

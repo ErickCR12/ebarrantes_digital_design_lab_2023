@@ -1,14 +1,14 @@
 module movement_tb();
 
 	reg [2:0] iactual, jactual, inext, jnext;
-	logic up, down, left, right, clk, rst;
+	logic up, down, left, right, clk, rst, movimientoValido;
 	
 	always begin
 		#5 clk = 0;
 		#5 clk = 1;
 	end
 	
-	movement move(iactual, jactual, up, right, left, down, clk, rst, inext, jnext);
+	movement move(iactual, jactual, up, right, left, down, clk, rst, inext, jnext, movimientoValido);
 	
 	initial begin
 		rst = 1;

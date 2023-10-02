@@ -1,7 +1,7 @@
 module movement(
 	input reg [2:0]i_actual, j_actual, 
 	input logic isUp, isRight, isLeft, isDown, clk, rst,
-	output reg [2:0]i_next, j_next
+	output reg [2:0]i_next, j_next, output logic movimientoValido
 );
 				
 	always @(posedge clk or posedge rst) begin
@@ -21,5 +21,7 @@ module movement(
 			end
 		end
 	end 
+	
+	assign movimientoValido = 1;
 					 
 endmodule

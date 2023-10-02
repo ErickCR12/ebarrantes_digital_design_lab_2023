@@ -1,13 +1,12 @@
 module crearTablero_tb();
 
 	reg [7:0] cantBombas; 
-	reg enable_matriz, clk, rst;
+	reg enable_matriz, clk, rst, tableroGenerado;
 	reg [6:0] tablero [7:0][7:0]; 
-	reg [2:0] i_actual, j_actual;
 		
 	crearTablero ct(
 		cantBombas, enable_matriz, clk, rst,
-		tablero, i_actual, j_actual
+		tablero, tableroGenerado
 	);
 	
 	always begin
@@ -17,6 +16,7 @@ module crearTablero_tb();
 
 	initial begin
 					
+		tableroGenerado = 0;
 		cantBombas = 0;
 		enable_matriz = 0;
 		rst = 1;
