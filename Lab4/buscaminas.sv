@@ -15,6 +15,11 @@ module buscaminas (
 		iniciar, tableroGenerado, esVictoria, movimientoValido, seleccionarCasilla, bomba, marcarBandera, clk, rst,
 		enable_matriz, enable_victoria, enable_mov, enable_seleccion, enable_derrota, enable_casillas, enable_bandera, state
 	);
+		
+	comprobarBomba cb (
+		tablero, i_actual, j_actual, seleccionarCasilla, clk, rst,
+		bomba
+	);
 	
 	registroTablero regtab(
 		cantBombas, i_actual, j_actual, enable_matriz, enable_bandera, enable_casillas, clk, rst,
@@ -31,10 +36,6 @@ module buscaminas (
 		i_next, j_next, enable_mov, clk, rst,
 		i_actual, j_actual
 	);
-	
-	comprobarBomba cb (
-		tablero, i_actual, j_actual, enable_seleccion, clk, rst,
-		bomba
-	);
+
 
 endmodule
