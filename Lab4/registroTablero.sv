@@ -41,12 +41,22 @@ module registroTablero (
 				end
 			end
 			bomb_count = 0;
+		end else if(enable_casillas) begin
+			if(temp[i_actual][j_actual][3:0] != 0) temp[i_actual][j_actual][4] = 1'b1;
+			else begin
+				for (int di = -1; di <= 1; di = di + 1) begin
+					for (int dj = -1; dj <= 1; dj = dj + 1) begin
+						if ((i_actual + di >= 0) && (i_actual + di < 8) && (j_actual + dj >= 0) && (j_actual + dj < 8))
+							temp[i_actual + di][j_actual + dj][4] = 1'b1;
+					end
+				end
+			end
 		end
 	end
 
 
 	assign tablero = temp;
-	assign tableroGenerado = (bomb_count >= cantBombas);
+	assign tableroGenerado = (bomb_count >= (cantBombas - 1));
 	
 endmodule
 

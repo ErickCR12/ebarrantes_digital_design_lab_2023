@@ -35,10 +35,28 @@ module buscaminas_tb();
 		#100
 				
 		esAbajo = 1;
-		esDerecha = 1;
-		#100
+		#10
 		
 		esAbajo = 0;
+		esDerecha = 1;
+		#140
+		
+		esDerecha = 0;
+		seleccionarCasilla = 1;
+		#100
+		
+		seleccionarCasilla = 0;
+		esIzquierda = 1;
+		#80
+		
+		esIzquierda = 0;
+		seleccionarCasilla = 1;
+		#60
+		
+		seleccionarCasilla = 0;
+		esDerecha = 1;
+		#20
+		
 		esDerecha = 0;
 		marcarBandera = 1;
 		#100
