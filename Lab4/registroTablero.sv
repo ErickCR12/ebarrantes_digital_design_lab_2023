@@ -27,8 +27,23 @@ module registroTablero (
 			bomb_count = bomb_count + 1;
 		end else if (enable_bandera) begin
 			temp[i_actual][j_actual][5] = 1'b1;
+		end else if (tableroGenerado) begin
+			for(int i = 0; i < 8; i = i + 1) begin
+				for(int j = 0; j < 8; j = j + 1) begin
+					temp[i][j][3:0] = 4'b0;
+					for (int di = -1; di <= 1; di = di + 1) begin
+						for (int dj = -1; dj <= 1; dj = dj + 1) begin
+							if ((i + di >= 0) && (i + di < 8) && (j + dj >= 0) && (j + dj < 8))
+								if (temp[i + di][j + dj][6] == 1'b1)
+									temp[i][j][3:0] = temp[i][j][3:0] + 1;
+						end
+					end
+				end
+			end
+			bomb_count = 0;
 		end
 	end
+
 
 	assign tablero = temp;
 	assign tableroGenerado = (bomb_count >= cantBombas);
