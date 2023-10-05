@@ -18,8 +18,6 @@ module vga(input logic clk,
 		.locked   ()    //  locked.export
 	);
 	
-	// pll vgapll(.inclk0(clk), .c0(vgaclk));
-	
 	vgaController vgaCont(vgaClk, hsync, vsync, sync_b, blank_b, x, y);
 	videoGen videoGen(x, y, r, g, b);
 endmodule
@@ -58,5 +56,33 @@ endmodule
 
 module videoGen(input logic [9:0] x, y,
 					 output logic [7:0] r, g, b);
+	
+	logic pixel, inrect;
+	// Given y position, choose a character to display
+	// Then look up the pxel value from the character ROM
+	// and dislpay in red or blue. Also, draw a green rectangle
+	
+	chargenrom chargenromb(y[8:3] + 8'd150, 10'd200, 10'd230, inrect);
+	assign {r, b} = (y[3] == 0) ? {{8{pixel}}, 8'h00} : {8'h00, {8{pixel}}};
+	assign g = inrect ? 8'hFF : 8'h00;
+endmodule
 
+module chargenrom(input logic [7:0] ch,
+						input logic [2:0] xoff, yoff,
+						output logic pixel);
+
+	logic [5:0] charrom[2047:0];
+	logic [7:0] line;
+	initial
+		$readmemb("charrom.txt", charrom);
+	
+	assign line = charrom[yoff + {ch - 65, 3'b000}];
+	assign pixel = line[3'd7-xoff];
+	
+endmodule
+
+module rectgen(input logic[9:0] x, y, left, top, right, bot,
+					output logic inrect);
+
+	assign inrect = (x >= left & x < right & y >= top & y < bot);
 endmodule
