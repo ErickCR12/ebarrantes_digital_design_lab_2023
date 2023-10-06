@@ -1,13 +1,14 @@
-module victory(input reg[7:0] Cbombas, 
+module victory(input reg[6:0] Cbombas, 
 				   input reg[6:0] tablero [7:0][7:0],
 					input clk, rst,
 					output logic isVictory);			  
 		
-		reg [7:0] count;
+		reg [6:0] count;
 		reg [6:0] elem;
 		
-		always_ff @(negedge clk or negedge rst)
+		always_ff @(negedge clk or negedge rst) 
 			begin
+			count = 7'b0000000;
 			if (!rst)
 				begin
 				isVictory = 0;
@@ -23,7 +24,7 @@ module victory(input reg[7:0] Cbombas,
 						end
 					end
 				end
-				if(count == Cbombas)
+				if(count - 1 == Cbombas)
 				begin
 					isVictory = 1;
 				end
