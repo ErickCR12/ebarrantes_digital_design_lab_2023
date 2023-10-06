@@ -1,7 +1,7 @@
 module victory_tb();
 
 	reg [6:0] tab [7:0][7:0];
-	reg [7:0]bombas, count;
+	reg [5:0]bombas, count;
 	logic clk, rst, victory;
 
 	victory win(bombas, tab, clk, rst, victory);

@@ -1,11 +1,11 @@
 module registroTablero (
-	input reg [7:0] cantBombas, input reg [2:0] i_actual, j_actual, input enable_matriz, enable_bandera, enable_casillas, clk, rst,
+	input reg [5:0] cantBombas, input reg [2:0] i_actual, j_actual, input enable_matriz, enable_bandera, enable_casillas, clk, rst,
 	output reg[6:0] tablero[7:0][7:0], output tableroGenerado
 );
 
 	reg [6:0] temp [7:0][7:0];
 	reg [2:0] random, i, j;
-	reg [7:0] bomb_count;
+	reg [5:0] bomb_count;
 	
 	generador_aleatorio ga (
 		clk, rst, cantBombas[2:0],

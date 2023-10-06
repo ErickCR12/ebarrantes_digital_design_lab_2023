@@ -2,7 +2,7 @@ module buscaminas_tb();
 
 	logic iniciar, seleccionarCasilla, esArriba, esDerecha, esIzquierda, esAbajo, marcarBandera, clk, rst;
 	logic [3:0] state;
-	reg[7:0] cantBombas;
+	reg[5:0] cantBombas;
 	reg[6:0] tablero [7:0][7:0];
 	reg [2:0] i_actual, j_actual;
 
@@ -67,7 +67,6 @@ module buscaminas_tb();
 		for (int i = 0; i < 8; i = i + 1)
 			for (int j = 0; j < 8; j = j + 1) 
 				$display("tablero[%0d][%0d] = %b", i, j, tablero[i][j]);
-		
 		
 	end	
 endmodule

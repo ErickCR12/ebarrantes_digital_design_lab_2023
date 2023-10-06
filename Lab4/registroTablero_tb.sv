@@ -3,7 +3,7 @@ module registroTablero_tb();
 	reg enable_matriz, enable_casillas, enable_bandera, clk, rst, tableroGenerado;
 	reg [2:0] i_actual, j_actual;
 	reg [6:0] tablero [7:0][7:0]; 
-	reg [7:0] cantBombas; 
+	reg [5:0] cantBombas; 
 		
 	registroTablero regtab(
 		cantBombas, i_actual, j_actual, enable_matriz, enable_bandera, enable_casillas, clk, rst,
