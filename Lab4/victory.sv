@@ -1,39 +1,23 @@
-module victory(input reg[6:0] Cbombas, 
+module victory(input reg[7:0] Cbombas, 
 				   input reg[6:0] tablero [7:0][7:0],
 					input clk, rst,
-					output logic isVictory);			  
+					output logic isVictory, output reg[7:0] count);			  
 		
-		reg [6:0] count;
-		reg [6:0] elem;
 		
-		always_ff @(negedge clk or negedge rst) 
-			begin
-			count = 7'b0000000;
-			if (!rst)
-				begin
+		always_ff @(negedge clk or negedge rst) begin
+			if (!rst) begin
 				isVictory = 0;
-				end
-			else
-			begin
+				count = 0;
+			end else begin
+				count = 0;
 				for(int i = 0; i < 8; i = i + 1) begin
 					for(int j = 0; j < 8; j = j + 1) begin
-						elem = tablero[i][j];
-						if(elem[4] == 0)
-						begin
-							count = count + 1;
-						end
+						if(tablero[i][j][4] == 0) count = count + 1;
 					end
 				end
-				if(count - 1 == Cbombas)
-				begin
-					isVictory = 1;
-				end
-				else
-				begin
-					isVictory = 0;
-				end
-			end
-		   
-			end
-		
+				if(count == Cbombas) isVictory = 1;
+				else isVictory = 0;
+			end   
+		end
+				
 endmodule
