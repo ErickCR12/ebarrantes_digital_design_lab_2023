@@ -1,9 +1,10 @@
 module victory(input reg[7:0] Cbombas, 
 				   input reg[6:0] tablero [7:0][7:0],
 					input clk, rst,
-					output logic isVictory, output reg[7:0] count);			  
+					output logic isVictory);			  
+					
 		
-		
+		reg[7:0] count;
 		always_ff @(negedge clk or negedge rst) begin
 			if (!rst) begin
 				isVictory = 0;

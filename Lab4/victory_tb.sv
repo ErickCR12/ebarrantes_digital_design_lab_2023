@@ -4,7 +4,7 @@ module victory_tb();
 	reg [7:0]bombas, count;
 	logic clk, rst, victory;
 
-	victory win(bombas, tab, clk, rst, victory, count);
+	victory win(bombas, tab, clk, rst, victory);
 	
 	always begin
 		#5 clk = 0;
