@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY buscaminas
+set_global_assignment -name TOP_LEVEL_ENTITY victory
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:07:11  SEPTEMBER 25, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.1 Lite Edition"
@@ -57,7 +57,7 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH buscaminas_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH victory_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME FSMbuscaminas_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id FSMbuscaminas_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME FSMbuscaminas_tb -section_id FSMbuscaminas_tb
@@ -84,6 +84,12 @@ set_global_assignment -name SYSTEMVERILOG_FILE cambiarIndices.sv
 set_global_assignment -name SYSTEMVERILOG_FILE buscaminas_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE registroTablero.sv
 set_global_assignment -name SYSTEMVERILOG_FILE registroTablero_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE comprobarBomba.sv
+set_global_assignment -name SYSTEMVERILOG_FILE victory.sv
+set_global_assignment -name SYSTEMVERILOG_FILE victory_tb.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME victory_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id victory_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME victory_tb -section_id victory_tb
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -92,5 +98,5 @@ set_global_assignment -name EDA_TEST_BENCH_FILE generador_aleatorio_tb.sv -secti
 set_global_assignment -name EDA_TEST_BENCH_FILE movement_tb.sv -section_id movement_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE buscaminas_tb.sv -section_id buscaminas_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE registroTablero_tb.sv -section_id registroTablero_tb
-set_global_assignment -name SYSTEMVERILOG_FILE comprobarBomba.sv
+set_global_assignment -name EDA_TEST_BENCH_FILE victory_tb.sv -section_id victory_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
