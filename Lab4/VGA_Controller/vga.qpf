@@ -19,13 +19,13 @@
 #
 # Quartus Prime
 # Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-# Date created = 10:37:52  September 26, 2023
+# Date created = 17:25:14  October 06, 2023
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "22.1"
-DATE = "10:37:52  September 26, 2023"
+DATE = "17:25:14  October 06, 2023"
 
 # Revisions
 
-PROJECT_REVISION = "VGA_Controller"
+PROJECT_REVISION = "vga"
