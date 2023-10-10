@@ -26,6 +26,8 @@ module vga(
 	videoGen vgavideoGen(
 		.x(x),
 		.y(y),
+		.i_actual(i_actual),
+		.j_actual(j_actual),
 		.r(r),
 		.g(g),
 		.b(b)

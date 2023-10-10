@@ -1,5 +1,5 @@
 module videoGen(
-	input logic [9:0] x, y,
+	input logic [9:0] x, y, input reg[2:0] i_actual, j_actual,
 	output logic [7:0] r, g, b
 );
 	logic inrect;
@@ -17,23 +17,17 @@ module videoGen(
 	
 	assign inrect = (colIndex < 8 && rowIndex < 8) && (x >= col_px && x < col_px+size && y >= row_px && y < row_px+size);
 	
-	assign {r, g, b} = inrect ? {8'h00, 8'hFF, 8'h00} : {8'h00, 8'h00, 8'h00};
-
 	
-	//assign inrect = (x >= width + frame & x < width - frame & y >= height + frame & y < height - frame);
-	//assign {r, g, b} = inrect ? {8'hFF, 8'hFF, 8'hFF} : {8'h00, 8'h00, 8'h00};
-
-	/*
-	rectgen videorectgen(
-		.x(x),
-		.y(y),
-		.left(10'd120),
-		.top(10'd150),
-		.right(10'd200),
-		.bot(10'd230),
-		.inrect(inrect)
-	);
+	always @* begin
+		if (inrect) begin
+			if (rowIndex == i_actual && colIndex == j_actual) begin
+				{r, g, b} = {8'hFF, 8'h00, 8'h00};
+			end else begin
+				{r, g, b} = {8'hF0, 8'hF7, 8'hF5};
+			end 
+		end else begin
+			{r, g, b} = {8'h00, 8'h00, 8'h00};
+		end
+	end
 	
-	assign {r, b} = (y[3] == 0) ?  {{8{pixel}}, 8'h00} : {8'h00,{8{pixel}}};
-	assign g = inrect ? 8'hFF : 8'h00;*/
 endmodule
