@@ -73,6 +73,23 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME buscaminas_tb -section_id
 set_global_assignment -name EDA_TEST_BENCH_NAME registroTablero_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id registroTablero_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME registroTablero_tb -section_id registroTablero_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME victory_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id victory_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME victory_tb -section_id victory_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_FILE FSMbuscaminas_tb.sv -section_id FSMbuscaminas_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE generador_aleatorio_tb.sv -section_id generador_aleatorio_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE movement_tb.sv -section_id movement_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE buscaminas_tb.sv -section_id buscaminas_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE registroTablero_tb.sv -section_id registroTablero_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE victory_tb.sv -section_id victory_tb
+set_global_assignment -name SYSTEMVERILOG_FILE videoGen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE vgaController.sv
+set_global_assignment -name SYSTEMVERILOG_FILE vga.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rectgen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pll.sv
 set_global_assignment -name SYSTEMVERILOG_FILE movement_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE movement.sv
 set_global_assignment -name SYSTEMVERILOG_FILE FSMbuscaminas.sv
@@ -87,16 +104,34 @@ set_global_assignment -name SYSTEMVERILOG_FILE registroTablero_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE comprobarBomba.sv
 set_global_assignment -name SYSTEMVERILOG_FILE victory.sv
 set_global_assignment -name SYSTEMVERILOG_FILE victory_tb.sv
-set_global_assignment -name EDA_TEST_BENCH_NAME victory_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id victory_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME victory_tb -section_id victory_tb
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name EDA_TEST_BENCH_FILE FSMbuscaminas_tb.sv -section_id FSMbuscaminas_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE generador_aleatorio_tb.sv -section_id generador_aleatorio_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE movement_tb.sv -section_id movement_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE buscaminas_tb.sv -section_id buscaminas_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE registroTablero_tb.sv -section_id registroTablero_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE victory_tb.sv -section_id victory_tb
+set_location_assignment PIN_G15 -to b[6]
+set_location_assignment PIN_J14 -to b[7]
+set_location_assignment PIN_F15 -to b[5]
+set_location_assignment PIN_H14 -to b[4]
+set_location_assignment PIN_F14 -to b[3]
+set_location_assignment PIN_H13 -to b[2]
+set_location_assignment PIN_G13 -to b[1]
+set_location_assignment PIN_B13 -to b[0]
+set_location_assignment PIN_F10 -to blank_b
+set_location_assignment PIN_AF14 -to clk
+set_location_assignment PIN_F11 -to g[6]
+set_location_assignment PIN_G12 -to g[5]
+set_location_assignment PIN_E11 -to g[7]
+set_location_assignment PIN_G11 -to g[4]
+set_location_assignment PIN_G10 -to g[3]
+set_location_assignment PIN_H12 -to g[2]
+set_location_assignment PIN_J10 -to g[1]
+set_location_assignment PIN_J9 -to g[0]
+set_location_assignment PIN_B11 -to hsync
+set_location_assignment PIN_F13 -to r[7]
+set_location_assignment PIN_E12 -to r[6]
+set_location_assignment PIN_D12 -to r[5]
+set_location_assignment PIN_C12 -to r[4]
+set_location_assignment PIN_B12 -to r[3]
+set_location_assignment PIN_E13 -to r[2]
+set_location_assignment PIN_C13 -to r[1]
+set_location_assignment PIN_A13 -to r[0]
+set_location_assignment PIN_C10 -to sync_b
+set_location_assignment PIN_D11 -to vsync
+set_location_assignment PIN_A11 -to vgaclk
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

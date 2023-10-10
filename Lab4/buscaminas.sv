@@ -3,7 +3,11 @@ module buscaminas (
 	input reg[5:0] cantBombas,
 	output reg[6:0] tablero [7:0][7:0],
 	output reg [2:0] i_actual, j_actual,
-	output logic [3:0] state
+	output logic [3:0] state,
+	output logic vgaclk,
+	output logic hsync, vsync,
+	output logic sync_b, blank_b,
+	output logic [7:0] r, g, b
 );
 
 	logic tableroGenerado, esVictoria, movimientoValido, bomba; //inputs para fsm
@@ -40,6 +44,13 @@ module buscaminas (
 	cambiarIndices ci(
 		i_next, j_next, enable_mov, clk, rst,
 		i_actual, j_actual
+	);
+	
+	
+	//Módulo para controlar el VGA y pintar el tablero en pantalla
+	vga monitor(
+		tablero, i_actual, j_actual, enable_victoria, enable_derrota, clk,
+		vgaclk, hsync, vsync, sync_b, blank_b, r, g, b
 	);
 	
 
