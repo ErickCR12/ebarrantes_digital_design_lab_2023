@@ -2,14 +2,26 @@ module videoGen(
 	input logic [9:0] x, y,
 	output logic [7:0] r, g, b
 );
-	logic pixel, inrect;
+	logic inrect;
 	
-	parameter width = 10'd80;
-	parameter height = 10'd60;
-	parameter frame = 10'd2;
+	parameter size = 10'd60;
+	parameter frame = 10'd4;
 	
-	assign inrect = (x >= width + frame & x < width - frame & y >= height + frame & y < height - frame);
+	int colIndex, rowIndex, col_px, row_px;
+	
+	assign colIndex = x / (size+frame);
+	assign rowIndex = y / (size+frame);
+	
+	assign col_px = colIndex*(size+frame);
+	assign row_px = rowIndex*(size+frame);
+	
+	assign inrect = x >= col_px && x < col_px+size && y >= row_px && y < row_px+size;
+	
 	assign {r, g, b} = inrect ? {8'hFF, 8'hFF, 8'hFF} : {8'h00, 8'h00, 8'h00};
+
+	
+	//assign inrect = (x >= width + frame & x < width - frame & y >= height + frame & y < height - frame);
+	//assign {r, g, b} = inrect ? {8'hFF, 8'hFF, 8'hFF} : {8'h00, 8'h00, 8'h00};
 
 	/*
 	rectgen videorectgen(
