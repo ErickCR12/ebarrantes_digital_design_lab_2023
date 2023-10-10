@@ -1,15 +1,12 @@
 module buscaminas_tb();
 
 	logic iniciar, seleccionarCasilla, esArriba, esDerecha, esIzquierda, esAbajo, marcarBandera, clk, rst;
-	logic [3:0] state;
 	reg[5:0] cantBombas;
 	// reg[6:0] tablero [7:0][7:0];
-	reg [2:0] i_actual, j_actual;
 
 	buscaminas bm (
 		iniciar, seleccionarCasilla, esArriba, esDerecha, esIzquierda, esAbajo, marcarBandera, clk, rst,
-		cantBombas,
-		i_actual, j_actual, state
+		cantBombas
 	);
 	
 	always begin
