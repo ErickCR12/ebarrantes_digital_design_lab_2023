@@ -26,7 +26,8 @@ module registroTablero (
 			temp[i][j][6] = 1'b1;
 			bomb_count = bomb_count + 1;
 		end else if (enable_bandera) begin
-			temp[i_actual][j_actual][5] = 1'b1;
+			if(temp[i_actual][j_actual][4] == 0)
+				temp[i_actual][j_actual][5] = 1'b1;
 		end else if (tableroGenerado) begin
 			for(int i = 0; i < 8; i = i + 1) begin
 				for(int j = 0; j < 8; j = j + 1) begin
@@ -42,12 +43,14 @@ module registroTablero (
 			end
 			bomb_count = 0;
 		end else if(enable_casillas) begin
-			if(temp[i_actual][j_actual][3:0] != 0) temp[i_actual][j_actual][4] = 1'b1;
-			else begin
-				for (int di = -1; di <= 1; di = di + 1) begin
-					for (int dj = -1; dj <= 1; dj = dj + 1) begin
-						if ((i_actual + di >= 0) && (i_actual + di < 8) && (j_actual + dj >= 0) && (j_actual + dj < 8))
-							temp[i_actual + di][j_actual + dj][4] = 1'b1;
+			if(temp[i_actual][j_actual][4] == 0 && temp[i_actual][j_actual][5] == 0) begin
+				if(temp[i_actual][j_actual][3:0] != 0) temp[i_actual][j_actual][4] = 1'b1;
+				else begin
+					for (int di = -1; di <= 1; di = di + 1) begin
+						for (int dj = -1; dj <= 1; dj = dj + 1) begin
+							if ((i_actual + di >= 0) && (i_actual + di < 8) && (j_actual + dj >= 0) && (j_actual + dj < 8))
+								temp[i_actual + di][j_actual + dj][4] = 1'b1;
+						end
 					end
 				end
 			end
