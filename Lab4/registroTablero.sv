@@ -27,7 +27,7 @@ module registroTablero (
 			bomb_count = bomb_count + 1;
 		end else if (enable_bandera) begin
 			if(temp[i_actual][j_actual][4] == 0)
-				temp[i_actual][j_actual][5] = 1'b1;
+				temp[i_actual][j_actual][5] = ~temp[i_actual][j_actual][5];
 		end else if (tableroGenerado) begin
 			for(int i = 0; i < 8; i = i + 1) begin
 				for(int j = 0; j < 8; j = j + 1) begin
