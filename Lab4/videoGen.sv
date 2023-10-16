@@ -63,14 +63,14 @@ module videoGen(
 			end else begin
 				{r, g, b} = {8'd155, 8'd155, 8'd155};
 				case(tablero[rowIndex][colIndex][3:0])
-					4'b0001: if(segmentB || segmentC) {r, g, b} = {8'd0, 8'd0, 8'd255};
-					4'b0010: if(segmentA || segmentB || segmentD || segmentE || segmentG) {r, g, b} = {8'd0, 8'd255, 8'd0};
-					4'b0011: {r, g, b} = {8'd255, 8'd0, 8'd0};
-					4'b0100: {r, g, b} = {8'd87, 8'd35, 8'd100};
-					4'b0101: {r, g, b} = {8'd63, 8'd40, 8'd23};
-					4'b0110: {r, g, b} = {8'd200, 8'd198, 8'd196};
-					4'b0111: {r, g, b} = {8'd0, 8'd0, 8'd0};
-					4'b1000: {r, g, b} = {8'd255, 8'd0, 8'd128};
+					4'b0001: if(segmentB || segmentC) {r, g, b} = {8'd0, 8'd0, 8'd255}; 																					// 1
+					4'b0010: if(segmentA || segmentB || segmentD || segmentE || segmentG) {r, g, b} = {8'd0, 8'd255, 8'd0};									// 2
+					4'b0011: if(segmentA || segmentB || segmentC || segmentD || segmentG) {r, g, b} = {8'd255, 8'd0, 8'd0};									// 3
+					4'b0100: if(segmentB || segmentC || segmentF || segmentG) {r, g, b} = {8'd87, 8'd37, 8'd100};												// 4
+					4'b0101: if(segmentA || segmentC || segmentD || segmentF || segmentG) {r, g, b} = {8'd63, 8'd40, 8'd23};									// 5
+					4'b0111: if(segmentA || segmentC || segmentD || segmentE || segmentF || segmentG) {r, g, b} = {8'd200, 8'd198, 8'd196};				// 6
+					4'b0111: if(segmentA || segmentB || segmentC) {r, g, b} = {8'd0, 8'd0, 8'd0};																		// 7
+					4'b1000: if(segmentA || segmentB || segmentC || segmentD || segmentE || segmentF || segmentF){r, g, b} = {8'd255, 8'd0, 8'd128};	// 8
 					default: {r, g, b} = {8'd155, 8'd155, 8'd155};
 				endcase
 				
