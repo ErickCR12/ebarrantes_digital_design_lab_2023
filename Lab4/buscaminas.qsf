@@ -149,4 +149,20 @@ set_location_assignment PIN_AE11 -to marcarBandera
 set_location_assignment PIN_AE12 -to rst
 set_location_assignment PIN_AC9 -to seleccionarCasilla
 set_global_assignment -name SYSTEMVERILOG_FILE Clock_divider.sv
+set_global_assignment -name SYSTEMVERILOG_FILE binaryToBCD.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sevenSegmentsDeco.sv
+set_location_assignment PIN_AE26 -to displayBombas0[0]
+set_location_assignment PIN_AE27 -to displayBombas0[1]
+set_location_assignment PIN_AE28 -to displayBombas0[2]
+set_location_assignment PIN_AG27 -to displayBombas0[3]
+set_location_assignment PIN_AF28 -to displayBombas0[4]
+set_location_assignment PIN_AG28 -to displayBombas0[5]
+set_location_assignment PIN_AH28 -to displayBombas0[6]
+set_location_assignment PIN_AJ29 -to displayBombas1[0]
+set_location_assignment PIN_AH29 -to displayBombas1[1]
+set_location_assignment PIN_AH30 -to displayBombas1[2]
+set_location_assignment PIN_AG30 -to displayBombas1[3]
+set_location_assignment PIN_AF29 -to displayBombas1[4]
+set_location_assignment PIN_AF30 -to displayBombas1[5]
+set_location_assignment PIN_AD27 -to displayBombas1[6]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

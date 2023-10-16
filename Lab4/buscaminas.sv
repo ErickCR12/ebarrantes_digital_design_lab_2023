@@ -4,11 +4,13 @@ module buscaminas (
 	output logic vgaclk,
 	output logic hsync, vsync,
 	output logic sync_b, blank_b,
-	output logic [7:0] r, g, b
+	output logic [7:0] r, g, b,
+	output reg [6:0] displayBombas0, displayBombas1
 );
 
 	reg clk_ms;
 	reg [2:0] i_actual, j_actual;
+	reg [7:0] cantBombasBCD;
 	logic [3:0] state;
 	reg[6:0] tablero [7:0][7:0];
 	logic tableroGenerado, esVictoria, movimientoValido, bomba; //inputs para fsm
@@ -58,5 +60,19 @@ module buscaminas (
 		vgaclk, hsync, vsync, sync_b, blank_b, r, g, b
 	);
 	
-
+	binaryToBCD bombasBCD(
+		cantBombas,
+		cantBombasBCD
+	); 
+	
+	sevenSegmentsDeco bombasSeg0(
+		cantBombasBCD[3:0],
+		displayBombas0
+	);
+	
+	sevenSegmentsDeco bombasSeg1(
+		cantBombasBCD[7:4],
+		displayBombas1
+	);
+	
 endmodule
