@@ -1,6 +1,6 @@
 module registroTablero (
 	input reg [5:0] cantBombas, input reg [2:0] i_actual, j_actual, input enable_matriz, enable_bandera, enable_casillas, clk, rst,
-	output reg[6:0] tablero[7:0][7:0], output tableroGenerado
+	output reg[6:0] tablero[7:0][7:0], output reg [5:0] cantBanderas, output tableroGenerado
 );
 
 	reg [6:0] temp [7:0][7:0];
@@ -19,6 +19,7 @@ module registroTablero (
 					temp[i][j] = 7'b0000000;
 			i = 0;
 			j = 0;
+			cantBanderas = 0;
 			bomb_count = 0;
 		end else if (enable_matriz) begin
 			i = random + bomb_count + 4;
@@ -26,8 +27,11 @@ module registroTablero (
 			temp[i][j][6] = 1'b1;
 			bomb_count = bomb_count + 1;
 		end else if (enable_bandera) begin
-			if(temp[i_actual][j_actual][4] == 0)
+			if(temp[i_actual][j_actual][4] == 0) begin
 				temp[i_actual][j_actual][5] = ~temp[i_actual][j_actual][5];
+				if(temp[i_actual][j_actual][5] == 0) cantBanderas = cantBanderas - 1;
+				else if(temp[i_actual][j_actual][5] == 1) cantBanderas = cantBanderas + 1;
+			end
 		end else if (tableroGenerado) begin
 			for(int i = 0; i < 8; i = i + 1) begin
 				for(int j = 0; j < 8; j = j + 1) begin
