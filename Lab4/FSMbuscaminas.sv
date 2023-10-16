@@ -1,9 +1,9 @@
 module FSMbuscaminas(
 	input iniciar, tableroGenerado, esVictoria, movimientoValido, seleccionarCasilla, bomba, marcarBandera, clk, rst,
-	output enable_matriz, enable_victoria, enable_mov, enable_seleccion, enable_derrota, enable_casillas, enable_bandera,
-	output logic [3:0] state
+	output enable_matriz, enable_victoria, enable_mov, enable_seleccion, enable_derrota, enable_casillas, enable_bandera
 );
 
+	logic [3:0] state;
 	logic [3:0] next_state;
 
 	//actual state logic

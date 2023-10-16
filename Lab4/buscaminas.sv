@@ -13,7 +13,6 @@ module buscaminas (
 	reg [5:0] cantBanderas;
 	reg [7:0] cantBombasBCD;
 	reg [7:0] cantBanderasBCD;
-	logic [3:0] state;
 	reg[6:0] tablero [7:0][7:0];
 	logic tableroGenerado, esVictoria, movimientoValido, bomba; //inputs para fsm
 	logic enable_matriz, enable_victoria, enable_mov, enable_seleccion, enable_derrota, enable_casillas, enable_bandera; //outputs de fsm
@@ -35,7 +34,7 @@ module buscaminas (
 	
 	FSMbuscaminas fsm(
 		iniciar, tableroGenerado, esVictoria, movimientoValido, seleccionarCasilla, bomba, marcarBandera, clk_ms, rst,
-		enable_matriz, enable_victoria, enable_mov, enable_seleccion, enable_derrota, enable_casillas, enable_bandera, state
+		enable_matriz, enable_victoria, enable_mov, enable_seleccion, enable_derrota, enable_casillas, enable_bandera
 	);
 		
 	
