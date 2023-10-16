@@ -10,7 +10,7 @@ module buscaminas (
 
 	reg clk_ms;
 	reg [2:0] i_actual, j_actual;
-	reg[5:0] cantBanderas;
+	reg [5:0] cantBanderas;
 	reg [7:0] cantBombasBCD;
 	reg [7:0] cantBanderasBCD;
 	logic [3:0] state;
@@ -41,7 +41,7 @@ module buscaminas (
 	
 	registroTablero regtab(
 		cantBombas, i_actual, j_actual, enable_matriz, enable_bandera, enable_casillas, clk_ms, rst,
-		tablero, tableroGenerado
+		tablero, cantBanderas, tableroGenerado
 	);
 	
 	movement m(

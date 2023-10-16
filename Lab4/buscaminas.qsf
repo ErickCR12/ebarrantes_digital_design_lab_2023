@@ -165,7 +165,6 @@ set_location_assignment PIN_AG30 -to displayBombas1[3]
 set_location_assignment PIN_AF29 -to displayBombas1[4]
 set_location_assignment PIN_AF30 -to displayBombas1[5]
 set_location_assignment PIN_AD27 -to displayBombas1[6]
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_location_assignment PIN_AB22 -to displayBanderas1[6]
 set_location_assignment PIN_AB23 -to displayBanderas0[0]
 set_location_assignment PIN_AE29 -to displayBanderas0[1]
@@ -180,3 +179,4 @@ set_location_assignment PIN_AD25 -to displayBanderas1[2]
 set_location_assignment PIN_AC25 -to displayBanderas1[3]
 set_location_assignment PIN_AB28 -to displayBanderas1[4]
 set_location_assignment PIN_AB25 -to displayBanderas1[5]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
