@@ -1,7 +1,7 @@
 module SistemaMantenimiento_tb();
 
 	// Señales de prueba
-	logic [1:0] M, t0, clk, rst;
+	logic [1:0] M, clk, rst;
 	reg [7:0] msg, cont_mant, cont_ciclos;
 	
 	always begin
@@ -20,7 +20,6 @@ module SistemaMantenimiento_tb();
 	// Simulación
 	initial begin
 	M = 0;
-	t0 = 0;
 	rst = 1;
 	#80
 	
@@ -34,7 +33,7 @@ module SistemaMantenimiento_tb();
 	
 	M = 0;
 	
-	#40
+	#120
 	
 	M = 1;
 	
